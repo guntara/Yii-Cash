@@ -1,0 +1,58 @@
+<?php
+/* @var $this AllocateController */
+/* @var $model Allocate */
+/* @var $form CActiveForm */
+
+$dateBR = $this->getDate($id_bankReceipt);
+?>
+
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'allocate-form',
+	'enableAjaxValidation'=>false,
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'id_bankReceipt'); ?>
+		<?php echo $form->textField($model,'id_bankReceipt',array('size'=>10,'maxlength'=>10,'readOnly'=>'readOnly','value'=>$id_bankReceipt)); ?>
+		<?php echo $form->error($model,'id_bankReceipt'); ?>
+	</div>
+
+	<div style="display:hidden">
+		<?php echo $form->textField($model,'tanggal',array('size'=>15,'maxlength'=>15,'readOnly'=>'readOnly','value'=>$dateBR)); ?>
+	</div>
+
+	<?php
+	echo "<div class=\"row\">";
+		echo $form->labelEx($model,'id_salesReport');
+		echo CHtml::dropDownList('allocate_id','', array(1=>'Sales Order', 2=>'Delivery Number', 3=>'Invoice',4=>'Others'),
+		array(
+		'prompt' => '--- Select Allocate Terms ---',
+		'ajax' => array(
+		'type'=>'POST',
+		'url'=>CController::createUrl('listing'),
+		'update'=>'#Allocate_id_salesReport',
+		)));
+		echo CHtml::dropDownList('Allocate[id_salesReport]','', array());
+		echo $form->error($model,'id_salesReport');
+	echo "</div>";
+
+	echo "<div class=\"row\">";
+		echo $form->labelEx($model,'remarks');
+		echo $form->textArea($model,'remarks',array ('maxlength' => 400, 'rows' => 4, 'cols' => 60));
+		echo $form->error($model,'remarks');
+	echo "</div>";
+	?>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->

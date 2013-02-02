@@ -1,0 +1,25 @@
+<?php
+/* @var $this BankReceiptController */
+/* @var $model BankReceipt */
+
+$this->breadcrumbs=array(
+	'Bank Receipts'=>array('index'),
+	'Create',
+);
+
+$this->menu=array(
+	array('label'=>'List BankReceipt', 'url'=>array('index')),
+	array('label'=>'Manage BankReceipt', 'url'=>array('admin')),
+);
+
+$id = '1602';
+$found = BankReceipt::model()->findAll('id = :id', array(':id' => $id));
+foreach ($found as $bankRM) : ?>
+<div class="view">
+<?php echo $bankRM->id .'</p>'; ?>
+</div>
+<?php endforeach ?>
+
+<h1>Create BankReceipt</h1>
+
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

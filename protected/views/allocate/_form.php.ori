@@ -1,0 +1,66 @@
+<?php
+/* @var $this AllocateController */
+/* @var $model Allocate */
+/* @var $form CActiveForm */
+?>
+
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'allocate-form',
+	'enableAjaxValidation'=>false,
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<div class="row">
+		<?php //echo $form->labelEx($model,'id_bankReceipt'); ?>
+		<?php //echo $form->textField($model,'id_bankReceipt',array('size'=>10,'maxlength'=>10)); ?>
+		<?php //echo $form->error($model,'id_bankReceipt'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'id_salesReport'); ?>
+		<?php echo $form->textField($model,'id_salesReport',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'id_salesReport'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'user_allocate'); ?>
+		<?php echo $form->textField($model,'user_allocate',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'user_allocate'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'remarks'); ?>
+		<?php echo $form->textField($model,'remarks',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'remarks'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'create_at'); ?>
+		<?php echo $form->textField($model,'create_at'); ?>
+		<?php echo $form->error($model,'create_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_modify'); ?>
+		<?php echo $form->textField($model,'last_modify'); ?>
+		<?php echo $form->error($model,'last_modify'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->
