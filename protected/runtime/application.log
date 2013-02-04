@@ -6060,3 +6060,20 @@ in /var/www/cash/index.php (13)
 2013/02/02 12:19:54 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
 in /var/www/cash/protected/controllers/SalesReportController.php (140)
 in /var/www/cash/index.php (13)
+2013/02/04 11:31:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('create')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/create')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php?r=allocate/create&id=1599
+HTTP_REFERER=http://localhost/cash/index.php?r=bankReceipt/view&id=1599
+---

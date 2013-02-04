@@ -32,11 +32,11 @@ class AllocateController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('admin','update','listing','testvalue'),
+				'actions'=>array('admin','create','update','listing','testvalue'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('create','delete'),
+				'actions'=>array('delete'),
 				//'users'=>array('admin'),
 				'users'=>Yii::app()->getModule('user')->getAdmins(),
 			),
