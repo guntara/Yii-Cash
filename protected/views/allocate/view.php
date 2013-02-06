@@ -25,6 +25,7 @@ $this->menu=array(
 		'id_bankReceipt',
 		'id_salesReport',
 		'user_allocate',
+		'amount',
 		'remarks',
 		'status',
 		'create_at',

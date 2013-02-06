@@ -8,14 +8,16 @@
  * @property string $id_bankReceipt
  * @property string $id_salesReport
  * @property string $user_allocate
+ * @property double $amount
  * @property string $remarks
- * @property string $status
+ * @property integer $status
  * @property string $create_at
  * @property string $last_modify
  */
 class Allocate extends CActiveRecord
 {
 	public $temp;
+	public $salesTotal;
 	public $tanggal;
 	/**
 	 * Returns the static model of the specified AR class.
@@ -44,9 +46,8 @@ class Allocate extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_bankReceipt, id_salesReport, remarks', 'required'),
-			array('id_salesReport', 'length', 'max'=>10),
-			array('remarks', 'length', 'max'=>200),
+			array('id_bankReceipt, id_salesReport, amount, remarks', 'required'),
+			array('amount', 'numerical'),
 			array('last_modify, tanggal', 'safe'),
 			array('user_allocate','default', 'value'=>$un->username, 'setOnEmpty'=>false, 'on'=>'insert'),
 			array('user_allocate','default', 'value'=>$un->username, 'setOnEmpty'=>false, 'on'=>'update'),
@@ -54,7 +55,7 @@ class Allocate extends CActiveRecord
 			array('last_modify','default', 'value'=>new CDbExpression('NOW()'), 'setOnEmpty'=>false,'on'=>'update'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_bankReceipt, id_salesReport, user_allocate, remarks, status, create_at, last_modify', 'safe', 'on'=>'search'),
+			array('id, id_bankReceipt, id_salesReport, user_allocate, amount, remarks, status, create_at, last_modify', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +80,7 @@ class Allocate extends CActiveRecord
 			'id_bankReceipt' => 'ID Bank Receipt',
 			'id_salesReport' => 'ID Sales Report',
 			'user_allocate' => 'User Allocate',
+			'amount' => 'Amount',
 			'remarks' => 'Remarks',
 			'status' => 'Status',
 			'create_at' => 'Create At',
@@ -101,8 +103,9 @@ class Allocate extends CActiveRecord
 		$criteria->compare('id_bankReceipt',$this->id_bankReceipt,true);
 		$criteria->compare('id_salesReport',$this->id_salesReport,true);
 		$criteria->compare('user_allocate',$this->user_allocate,true);
+		$criteria->compare('amount',$this->amount);
 		$criteria->compare('remarks',$this->remarks,true);
-		$criteria->compare('status',$this->status,true);
+		$criteria->compare('status',$this->status);
 		$criteria->compare('create_at',$this->create_at,true);
 		$criteria->compare('last_modify',$this->last_modify,true);
 
@@ -112,8 +115,13 @@ class Allocate extends CActiveRecord
 	}
 
 	public function beforeSave(){
-		$this->status = 1;
-		return parent::beforeSave();
+		$totalBR = $this->getTotBR($this->id_bankReceipt);
+		
+		if($totalBR >= $this->amount) { return parent::beforeSave(); }
+		else {
+			$this->addError('amount', 'Allocate payment can\'t greather than current bank transfer!');
+			return false; 
+		}
 	}
 
 //---------------------
@@ -132,7 +140,11 @@ class Allocate extends CActiveRecord
 			),
 		));
 	}
+
+	public function getTotBR($idBR)
+	{
+		$data = BankReceipt::model()->findByPk($idBR);
+		return $data->jumlah;
+	}
 //---------------------
-
-
 }

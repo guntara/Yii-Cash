@@ -6077,3 +6077,271 @@ Stack trace:
 REQUEST_URI=/cash/index.php?r=allocate/create&id=1599
 HTTP_REFERER=http://localhost/cash/index.php?r=bankReceipt/view&id=1599
 ---
+2013/02/05 10:22:30 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:25:55 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:30:14 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:36:17 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:36:24 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:37:57 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:44:44 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:46:22 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:47:04 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:47:07 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:48:22 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:49:26 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:50:30 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 10:51:08 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 11:08:30 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 11:38:14 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 11:39:09 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 11:39:11 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 11:39:15 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 11:39:53 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 12:26:43 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 12:27:35 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 12:28:17 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/05 12:29:14 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:20:25 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:20:28 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:22:46 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:22:53 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:23:27 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:23:29 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 11:28:07 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 14:22:01 [warning] [application] Failed to set unsafe attribute "tanggal" of "Allocate".
+in /var/www/cash/protected/controllers/AllocateController.php (73)
+in /var/www/cash/index.php (13)
+2013/02/06 14:22:34 [warning] [application] Failed to set unsafe attribute "tanggal" of "Allocate".
+in /var/www/cash/protected/controllers/AllocateController.php (73)
+in /var/www/cash/index.php (13)
+2013/02/06 14:22:49 [warning] [application] Failed to set unsafe attribute "tanggal" of "Allocate".
+in /var/www/cash/protected/controllers/AllocateController.php (73)
+in /var/www/cash/index.php (13)
+2013/02/06 14:23:20 [warning] [application] Failed to set unsafe attribute "tanggal" of "Allocate".
+in /var/www/cash/protected/controllers/AllocateController.php (73)
+in /var/www/cash/index.php (13)
+2013/02/06 15:07:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('delete')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/delete')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php?r=allocate%2Fdelete&id=3&ajax=allocate-grid
+HTTP_REFERER=http://localhost/cash/index.php?r=bankReceipt/view&id=1601
+---
+2013/02/06 15:07:45 [warning] [application] Failed to set unsafe attribute "temp" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (140)
+in /var/www/cash/index.php (13)
+2013/02/06 15:22:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('delete')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/delete')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php?r=allocate%2Fdelete&id=1&ajax=allocate-grid
+HTTP_REFERER=http://localhost/cash/index.php?r=bankReceipt/view&id=1599
+---
+2013/02/06 15:43:58 [error] [exception.CException] exception 'CException' with message 'Allocate and its behaviors do not have a method or closure named "getTotSR".' in /var/www/yiiApps/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTotSR', Array)
+#1 /var/www/cash/protected/models/Allocate.php(118): CActiveRecord->__call('getTotSR', Array)
+#2 /var/www/cash/protected/models/Allocate.php(118): Allocate->getTotSR('DN04689')
+#3 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(1011): Allocate->beforeSave()
+#4 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#5 /var/www/cash/protected/controllers/AllocateController.php(74): CActiveRecord->save()
+#6 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): AllocateController->actionCreate()
+#7 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#14 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/create')
+#17 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /var/www/cash/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/cash/index.php?r=allocate/create&id=1603
+HTTP_REFERER=http://localhost/cash/index.php?r=allocate/create&id=1603
+---
+2013/02/06 15:45:45 [error] [php] Trying to get property of non-object (/var/www/cash/protected/models/Allocate.php:143)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(796): Allocate->insert()
+#1 /var/www/cash/protected/controllers/AllocateController.php(74): Allocate->save()
+#2 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): AllocateController->actionCreate()
+#3 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): AllocateController->runAction()
+#5 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): AllocateController->filterAccessControl()
+#8 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#10 /var/www/yiiApps/framework/web/CController.php(266): AllocateController->runActionWithFilters()
+#11 /var/www/yiiApps/framework/web/CWebApplication.php(283): AllocateController->run()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#13 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php?r=allocate/create&id=1603
+in /var/www/cash/protected/models/Allocate.php (143)
+in /var/www/cash/protected/models/Allocate.php (118)
+in /var/www/cash/protected/controllers/AllocateController.php (74)
+2013/02/06 15:47:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('delete')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/delete')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php?r=allocate%2Fdelete&id=4&ajax=allocate-grid
+HTTP_REFERER=http://localhost/cash/index.php?r=bankReceipt/view&id=1603
+---
+2013/02/06 15:54:50 [error] [exception.CException] exception 'CException' with message 'Allocate and its behaviors do not have a method or closure named "getTotBR".' in /var/www/yiiApps/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(226): CComponent->__call('getTotBR', Array)
+#1 /var/www/cash/protected/models/Allocate.php(118): CActiveRecord->__call('getTotBR', Array)
+#2 /var/www/cash/protected/models/Allocate.php(118): Allocate->getTotBR('1603')
+#3 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(1011): Allocate->beforeSave()
+#4 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(796): CActiveRecord->insert(NULL)
+#5 /var/www/cash/protected/controllers/AllocateController.php(74): CActiveRecord->save()
+#6 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): AllocateController->actionCreate()
+#7 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#14 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/create')
+#17 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /var/www/cash/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/cash/index.php?r=allocate/create&id=1603
+HTTP_REFERER=http://localhost/cash/index.php?r=allocate/create&id=1603
+---
+2013/02/06 15:55:30 [error] [php] Trying to get property of non-object (/var/www/cash/protected/models/Allocate.php:144)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(796): Allocate->insert()
+#1 /var/www/cash/protected/controllers/AllocateController.php(74): Allocate->save()
+#2 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): AllocateController->actionCreate()
+#3 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): AllocateController->runAction()
+#5 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): AllocateController->filterAccessControl()
+#8 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#10 /var/www/yiiApps/framework/web/CController.php(266): AllocateController->runActionWithFilters()
+#11 /var/www/yiiApps/framework/web/CWebApplication.php(283): AllocateController->run()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#13 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php?r=allocate/create&id=1603
+in /var/www/cash/protected/models/Allocate.php (144)
+in /var/www/cash/protected/models/Allocate.php (118)
+in /var/www/cash/protected/controllers/AllocateController.php (74)
+2013/02/06 16:07:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('delete')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('allocate/delete')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php?r=allocate%2Fdelete&id=5&ajax=allocate-grid
+HTTP_REFERER=http://localhost/cash/index.php?r=bankReceipt/view&id=1603
+---

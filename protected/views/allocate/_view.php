@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->user_allocate); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('amount')); ?>:</b>
+	<?php echo CHtml::encode($data->amount); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('remarks')); ?>:</b>
 	<?php echo CHtml::encode($data->remarks); ?>
 	<br />
@@ -29,11 +33,11 @@
 	<?php echo CHtml::encode($data->status); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('create_at')); ?>:</b>
 	<?php echo CHtml::encode($data->create_at); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('last_modify')); ?>:</b>
 	<?php echo CHtml::encode($data->last_modify); ?>
 	<br />

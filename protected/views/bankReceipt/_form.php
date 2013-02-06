@@ -60,23 +60,31 @@
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'allocate-grid',
 	'dataProvider'=>Allocate::model()->getAllocate($id_bR),
-	'rowCssClassExpression'=>'($data->status==0)?"normal":"paid"',
 	'columns'=>array(
 		array(
-			'name'=>'id_bankReceipt',
-			'header'=>'ID Bank',
+			'name'=>'id_salesReport',
+			'header'=>'Allocated to',
 			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'50px'),
+			'headerHtmlOptions'=>array('width'=>'80px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 
 		),
+		'remarks',
 		array(
-			'name'=>'id_salesReport',
-			'header'=>'ID SR',
-			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'50px'),
-			'htmlOptions'=>array('style'=>'text-align: center;'),
-
+			'name'=>'salesTotal',
+			'header'=>'Due Payment',
+			'type'=>'raw',
+			'headerHtmlOptions'=>array('width'=>'85px'),
+			'htmlOptions'=>array('style'=>'text-align: right;'),
+			'value'=>array($this, 'getAmount'),
+		),
+		array(
+			'name'=>'amount',
+			'header'=>'Total Payed',
+			'type'=>'raw',
+			'value'=>function($data){ return number_format($data->amount, 2); },
+			'headerHtmlOptions'=>array('width'=>'80px'),
+			'htmlOptions'=>array('style'=>'text-align: right;'),
 		),
 		array(
 			'name'=>'user_allocate',
@@ -85,23 +93,6 @@
 			'headerHtmlOptions'=>array('width'=>'80px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 
-		),
-		'remarks',
-		array(
-			'name'=>'id_salesReport',
-			'header'=>'Total',
-			'type'=>'raw',
-			'headerHtmlOptions'=>array('width'=>'80px'),
-			'htmlOptions'=>array('style'=>'text-align: right;'),
-			'value'=>array($this, 'getAmount'),
-		),
-		array(
-			'name'=>'status',
-			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'50px'),
-			'htmlOptions'=>array('style'=>'text-align: center;'),
-			'filter'=>array('1'=>'PAID','0'=>'UNPAID'),
-			'value'=>'($data->status=="1")?("PAID"):("UNPAID")'
 		),
 		array(
 			'header'=>'Action',

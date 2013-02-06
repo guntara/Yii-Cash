@@ -171,7 +171,6 @@ class SalesReportController extends Controller
 	}
 
 // ----------------------------
-
 	public function agetime($data)
 	{
 		if ($data->status == 0) {
@@ -186,5 +185,4 @@ class SalesReportController extends Controller
 		$this->render('paymentstatus');
 	}
 // ----------------------------
-
 }

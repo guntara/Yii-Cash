@@ -43,6 +43,12 @@ $dateBR = $this->getDate($id_bankReceipt);
 	echo "</div>";
 
 	echo "<div class=\"row\">";
+		echo $form->labelEx($model,'amount');
+		echo $form->textField($model,'amount',array('size'=>15,'maxlength'=>15));
+		echo $form->error($model,'amount');
+	echo "</div>";
+
+	echo "<div class=\"row\">";
 		echo $form->labelEx($model,'remarks');
 		echo $form->textArea($model,'remarks',array ('maxlength' => 400, 'rows' => 4, 'cols' => 60));
 		echo $form->error($model,'remarks');

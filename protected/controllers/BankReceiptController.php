@@ -182,7 +182,7 @@ class BankReceiptController extends Controller
 		    ->where('id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$data->id_salesReport))
 		    ->queryRow();
 
-		return $data['total'];
+		return number_format($data['total'], 2);
 	}
 
 	public function testValue($data, $row)

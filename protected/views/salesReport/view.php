@@ -30,11 +30,12 @@ $this->menu=array(
 		'customer',
 		'quantity',
 		'uom',
-		'teritory',
+		'territory',
 		'sales_term',
 		'total',
 		'status',
 		'payment_date',
 		'create_at',
+		'update_at',
 	),
 )); ?>

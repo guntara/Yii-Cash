@@ -54,8 +54,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=cash',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'samson2612',
+			'username' => 'xxx',
+			'password' => 'xxx',
 			'charset' => 'utf8',
 			'tablePrefix'=>'tbl_',
 		),

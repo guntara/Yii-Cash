@@ -32,8 +32,13 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'amount'); ?>
+		<?php echo $form->textField($model,'amount'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'remarks'); ?>
-		<?php echo $form->textField($model,'remarks',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'remarks',array('size'=>60,'maxlength'=>2000)); ?>
 	</div>
 
 	<div class="row">

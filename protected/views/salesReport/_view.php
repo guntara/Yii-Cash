@@ -42,8 +42,8 @@
 	<?php echo CHtml::encode($data->uom); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('teritory')); ?>:</b>
-	<?php echo CHtml::encode($data->teritory); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('territory')); ?>:</b>
+	<?php echo CHtml::encode($data->territory); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('sales_term')); ?>:</b>
@@ -64,6 +64,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('create_at')); ?>:</b>
 	<?php echo CHtml::encode($data->create_at); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('update_at')); ?>:</b>
+	<?php echo CHtml::encode($data->update_at); ?>
 	<br />
 
 	*/ ?>

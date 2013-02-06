@@ -3,12 +3,12 @@
 /* @var $model SalesReport */
 
 $this->breadcrumbs=array(
-	'Sales Reports'=>array('index'),
+	'Sales Reports'=>array('admin'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List SalesReport', 'url'=>array('index')),
+	array('label'=>'List SalesReport', 'url'=>array('admin')),
 	//array('label'=>'Create SalesReport', 'url'=>array('create')),
 );
 
@@ -37,6 +37,7 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'sales-report-grid',
 	'dataProvider'=>$model->search(),
+	'rowCssClassExpression'=>'($data->status==0)?"normal":"green"',
 	'filter'=>$model,
 	'columns'=>array(
 		array(

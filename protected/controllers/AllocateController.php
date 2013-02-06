@@ -46,30 +46,6 @@ class AllocateController extends Controller
 		);
 	}
 
-//---------------------
-	public function actionListing()
-	{
-		$data1=SalesReport::model()->findAll('status = :status ORDER BY id_SO',array(':status'=>"0"));
-		$data2=SalesReport::model()->findAll('status = :status ORDER BY id_DO',array(':status'=>"0"));
-		$data3=SalesReport::model()->findAll('status = :status ORDER BY id_invoice',array(':status'=>"0"));
-		if ($_POST['allocate_id']==4)
-		{
-			echo CHtml::tag('option', array('value'=>'Cash'),CHtml::encode('Cash'),true);
-			echo CHtml::tag('option', array('value'=>'Giro'),CHtml::encode('Giro'),true);
-		}
-		else
-		{
-			if ($_POST['allocate_id']==1) $data=CHtml::listData($data1, 'id_SO', 'id_SO');
-			if ($_POST['allocate_id']==2) $data=CHtml::listData($data2, 'id_DO', 'id_DO');
-			if ($_POST['allocate_id']==3) $data=CHtml::listData($data3, 'id_invoice', 'id_invoice');
-			foreach($data as $value=>$name)
-			{
-				echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
-			}
-		}
-	}
-//---------------------
-
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
@@ -98,7 +74,7 @@ class AllocateController extends Controller
 			if($model->save())
 			{
 				$idSR = $this->getIdSR($model->id_salesReport);
-				$sql = 'UPDATE `tbl_sales_report` SET `status`=1, `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR .'';
+				$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR .'';
 				Yii::app()->db->createCommand($sql)->execute();
 				$this->redirect(array('bankReceipt/view','id'=>$model->id_bankReceipt));
 			}
@@ -140,11 +116,12 @@ class AllocateController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		//$this->loadModel($id)->delete();
 		$dSR = $this->getDetSR($id);
 		if($this->loadModel($id)->delete())
 		{
 			$idSR = $this->getIdSR($dSR);
-			$sql = 'UPDATE `tbl_sales_report` SET `status`=0, `payment_date`=\'0000-00-00\' WHERE id='. $idSR .'';
+			$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `payment_date`=\'0000-00-00\' WHERE id='. $idSR .'';
 			Yii::app()->db->createCommand($sql)->execute();
 		}
 
@@ -206,6 +183,28 @@ class AllocateController extends Controller
 	}
 
 //---------------------
+	public function actionListing()
+	{
+		$data1=SalesReport::model()->findAll('status = :status ORDER BY id_SO',array(':status'=>"0"));
+		$data2=SalesReport::model()->findAll('status = :status ORDER BY id_DO',array(':status'=>"0"));
+		$data3=SalesReport::model()->findAll('status = :status ORDER BY id_invoice',array(':status'=>"0"));
+		if ($_POST['allocate_id']==4)
+		{
+			echo CHtml::tag('option', array('value'=>'Cash'),CHtml::encode('Cash'),true);
+			echo CHtml::tag('option', array('value'=>'Giro'),CHtml::encode('Giro'),true);
+		}
+		else
+		{
+			if ($_POST['allocate_id']==1) $data=CHtml::listData($data1, 'id_SO', 'id_SO');
+			if ($_POST['allocate_id']==2) $data=CHtml::listData($data2, 'id_DO', 'id_DO');
+			if ($_POST['allocate_id']==3) $data=CHtml::listData($data3, 'id_invoice', 'id_invoice');
+			foreach($data as $value=>$name)
+			{
+				echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
+			}
+		}
+	}
+
 	public function getIdSR($kw)
 	{
 		$data = Yii::app()->db->createCommand()
@@ -229,5 +228,4 @@ class AllocateController extends Controller
 		return $data->tanggal;
 	}
 //---------------------
-
 }

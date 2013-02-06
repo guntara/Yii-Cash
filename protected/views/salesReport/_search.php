@@ -57,8 +57,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'teritory'); ?>
-		<?php echo $form->textField($model,'teritory',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->label($model,'territory'); ?>
+		<?php echo $form->textField($model,'territory',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">
@@ -84,6 +84,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'create_at'); ?>
 		<?php echo $form->textField($model,'create_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'update_at'); ?>
+		<?php echo $form->textField($model,'update_at'); ?>
 	</div>
 
 	<div class="row buttons">

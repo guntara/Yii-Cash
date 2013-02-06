@@ -64,9 +64,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'teritory'); ?>
-		<?php echo $form->textField($model,'teritory',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'teritory'); ?>
+		<?php echo $form->labelEx($model,'territory'); ?>
+		<?php echo $form->textField($model,'territory',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'territory'); ?>
 	</div>
 
 	<div class="row">
@@ -97,6 +97,12 @@
 		<?php echo $form->labelEx($model,'create_at'); ?>
 		<?php echo $form->textField($model,'create_at'); ?>
 		<?php echo $form->error($model,'create_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'update_at'); ?>
+		<?php echo $form->textField($model,'update_at'); ?>
+		<?php echo $form->error($model,'update_at'); ?>
 	</div>
 
 	<div class="row buttons">
