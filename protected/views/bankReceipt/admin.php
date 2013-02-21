@@ -37,7 +37,7 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'bank-receipt-grid',
 	'dataProvider'=>$model->search(),
-	//'rowCssClassExpression'=>'($data->status==0)?"background-color:#00AA00;":"red"',
+	'rowCssClassExpression'=>'$data->getColor($this->dataProvider->data[$row])',//array($this,'getColor'),
 	'filter'=>$model,
 	'columns'=>array(
 		array(

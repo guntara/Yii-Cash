@@ -11,19 +11,21 @@
  * @property string $posting_date
  * @property string $due_date
  * @property string $customer
- * @property integer $quantity
+ * @property double $quantity
  * @property string $uom
- * @property string $teritory
+ * @property string $territory
  * @property string $sales_term
  * @property double $total
  * @property integer $status
  * @property string $payment_date
  * @property string $create_at
+ * @property string $update_at
  */
 class SalesReport extends CActiveRecord
 {
 	public $temp;
-
+	public $ageDays;
+	public $lateDays;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -50,15 +52,16 @@ class SalesReport extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, teritory, sales_term, total, payment_date, create_at', 'required'),
-			array('quantity, status', 'numerical', 'integerOnly'=>true),
-			array('total', 'numerical'),
+			array('id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, territory, sales_term, total, payment_date, create_at', 'required'),
+			array('status', 'numerical', 'integerOnly'=>true),
+			array('quantity, total', 'numerical'),
 			array('id_SO, id_DO, id_invoice, uom', 'length', 'max'=>10),
 			array('customer, sales_term', 'length', 'max'=>50),
-			array('teritory', 'length', 'max'=>20),
+			array('territory', 'length', 'max'=>20),
+			array('update_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, teritory, sales_term, total, status, payment_date, create_at', 'safe', 'on'=>'search'),
+			array('id, id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, territory, sales_term, total, status, payment_date, create_at, update_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -88,12 +91,13 @@ class SalesReport extends CActiveRecord
 			'customer' => 'Customer',
 			'quantity' => 'Qty',
 			'uom' => 'UOM',
-			'teritory' => 'Teritory',
+			'territory' => 'Territory',
 			'sales_term' => 'Sales Term',
 			'total' => 'Total',
 			'status' => 'Status',
 			'payment_date' => 'Payment Date',
 			'create_at' => 'Create At',
+			'update_at' => 'Update At',
 		);
 	}
 
@@ -117,12 +121,13 @@ class SalesReport extends CActiveRecord
 		$criteria->compare('customer',$this->customer,true);
 		$criteria->compare('quantity',$this->quantity);
 		$criteria->compare('uom',$this->uom,true);
-		$criteria->compare('teritory',$this->teritory,true);
+		$criteria->compare('territory',$this->territory,true);
 		$criteria->compare('sales_term',$this->sales_term,true);
 		$criteria->compare('total',$this->total);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('payment_date',$this->payment_date,true);
 		$criteria->compare('create_at',$this->create_at,true);
+		$criteria->compare('update_at',$this->update_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

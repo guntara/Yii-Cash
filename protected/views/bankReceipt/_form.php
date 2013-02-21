@@ -110,3 +110,16 @@
 		),
 	),
 )); ?>
+
+<br>
+<div style="border-top:1px solid silver; border-bottom:1px solid silver; background: #EEEEEE; padding:10px;">
+<?php
+if ($data = explode('_', $model->getSumPay($id_bR))) {
+	echo '<table border=0>';
+	//echo '<tr><td width=150>Number of Invoice Payed</td><td width=5>:</td><td><b>'.$data[1].'</b></td></tr>';
+	echo '<tr><td width=150>Total of Amount Payed  </td><td width=5>:</td><td><b>'.number_format($data[0],2).'</b></td></tr>';
+	echo '<tr><td width=150>Total of Un-Allocated  </td><td width=5>:</td><td><b>'.number_format(($model->jumlah - $data[0]),2).'</b></td></tr>';
+	echo '</table>';
+}
+?>
+</div>

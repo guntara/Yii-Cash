@@ -24,6 +24,8 @@
 class SalesReport extends CActiveRecord
 {
 	public $temp;
+	public $ageDays;
+	public $lateDays;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -134,6 +136,24 @@ class SalesReport extends CActiveRecord
 			),
 			'sort' => array(
 				'defaultOrder' => 'id desc',
+			),
+		));
+	}
+
+	public function paymentstatus($id)
+	{
+		$criteria = new CDbCriteria;
+		if($id==1) $criteria->condition = '`status`=0 AND DATE_SUB(CURDATE(),INTERVAL 7 DAY) >= `due_date`';
+		if($id==2) $criteria->condition = '`status`=0 AND `due_date`> DATE_ADD(CURDATE(), INTERVAL -7 DAY) AND `due_date` <= CURDATE()';
+		if($id==3) $criteria->condition = '`status`=0 AND `due_date`>= CURDATE() AND `due_date` <= DATE_ADD(CURDATE(), INTERVAL 7 DAY)';
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 20,
+			),
+			'sort' => array(
+				'defaultOrder' => 'due_date desc',
 			),
 		));
 	}

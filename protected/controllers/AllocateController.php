@@ -74,8 +74,15 @@ class AllocateController extends Controller
 			if($model->save())
 			{
 				$idSR = $this->getIdSR($model->id_salesReport);
-				$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR .'';
+				$totalSR = floor(Allocate::model()->getTotSR($model->id_salesReport)/10);
+				$totalSR *= 10;
+				$payed = Allocate::model()->getPayedSR($model->id_salesReport);
+
+				if ($totalSR == $payed) {
+				$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `status`=1, `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR;}
+				else {	$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR; }
 				Yii::app()->db->createCommand($sql)->execute();
+				//CVarDumper::dump($totalSR);
 				$this->redirect(array('bankReceipt/view','id'=>$model->id_bankReceipt));
 			}
 		}
@@ -121,7 +128,7 @@ class AllocateController extends Controller
 		if($this->loadModel($id)->delete())
 		{
 			$idSR = $this->getIdSR($dSR);
-			$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `payment_date`=\'0000-00-00\' WHERE id='. $idSR .'';
+			$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `status`=0, `payment_date`=\'0000-00-00\' WHERE id='. $idSR .'';
 			Yii::app()->db->createCommand($sql)->execute();
 		}
 

@@ -37,7 +37,7 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'bank-receipt-grid',
 	'dataProvider'=>$model->search(),
-	//'rowCssClassExpression'=>'($data->status==0)?"background-color:#00AA00;":"red"',
+	'rowCssClassExpression'=>'$data->getColor($this->dataProvider->data[$row])',//array($this,'getColor'),
 	'filter'=>$model,
 	'columns'=>array(
 		array(
@@ -57,7 +57,7 @@ $('.search-form form').submit(function(){
 		array(
 			'name'=>'jumlah',
 			'type'=>'raw',
-			'value'=>function($data){ return number_format($data->total, 2); },
+			'value'=>function($data){ return number_format($data->jumlah, 2); },
 			'headerHtmlOptions'=>array('width'=>'100px'),
 			'htmlOptions'=>array('style'=>'text-align: right; padding-right: 0.5em'),
 
@@ -76,6 +76,14 @@ $('.search-form form').submit(function(){
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 
 		),
+		/*array(
+			'name'=>'status',
+			'type'=>'text',
+			'value'=> array($this,'getColor'),
+			'headerHtmlOptions'=>array('width'=>'50px'),
+			'htmlOptions'=>array('style'=>'text-align: center;'),
+
+		),*/
 		array(
 			'header'=>'Action',
 			'headerHtmlOptions'=>array('width'=>'40px'),

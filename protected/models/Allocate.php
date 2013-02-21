@@ -17,6 +17,7 @@
 class Allocate extends CActiveRecord
 {
 	public $temp;
+	public $valid;
 	public $salesTotal;
 	public $tanggal;
 	/**
@@ -47,7 +48,7 @@ class Allocate extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('id_bankReceipt, id_salesReport, amount, remarks', 'required'),
-			array('amount', 'numerical'),
+			array('amount, valid', 'numerical'),
 			array('last_modify, tanggal', 'safe'),
 			array('user_allocate','default', 'value'=>$un->username, 'setOnEmpty'=>false, 'on'=>'insert'),
 			array('user_allocate','default', 'value'=>$un->username, 'setOnEmpty'=>false, 'on'=>'update'),
@@ -115,13 +116,17 @@ class Allocate extends CActiveRecord
 	}
 
 	public function beforeSave(){
+		$totalAl = $this->getTotAl($this->id_bankReceipt);
 		$totalBR = $this->getTotBR($this->id_bankReceipt);
+		$totalSR = floor($this->getTotSR($this->id_salesReport) % 10) * 10;
+		$payed = $this->getPayedSR($this->id_salesReport);
 		
-		if($totalBR >= $this->amount) { return parent::beforeSave(); }
-		else {
+		if(($totalBR - $totalAl) < $this->amount) {
 			$this->addError('amount', 'Allocate payment can\'t greather than current bank transfer!');
 			return false; 
 		}
+
+		if (parent::beforeSave()) {	return true;	}
 	}
 
 //---------------------
@@ -141,10 +146,48 @@ class Allocate extends CActiveRecord
 		));
 	}
 
+	public function getTotAl($idBR)
+	{
+		$totalPay=0;
+		$provider = Allocate::model()->findAll('id_bankReceipt = :idBR',array(':idBR'=>$idBR));
+		foreach($provider as $data)
+		{
+			$totalPay += $data->amount;
+		}
+		return $totalPay;
+	}
+
 	public function getTotBR($idBR)
 	{
 		$data = BankReceipt::model()->findByPk($idBR);
 		return $data->jumlah;
+	}
+
+	public function getTotSR($idSR)
+	{
+		$data = Yii::app()->db->createCommand()
+		    ->select()
+		    ->from('tbl_sales_report')
+		    ->where('id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$idSR))
+		    ->queryRow();
+		return $data['total'];
+	}
+
+	public function getPayedSR($idSR)
+	{
+		$SR = Yii::app()->db->createCommand()
+		    ->select()
+		    ->from('tbl_sales_report')
+		    ->where('id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$idSR))
+		    ->queryRow();
+
+		$salesRep = Yii::app()->db->createCommand()
+		    ->select('sum(amount) as totAmount')
+		    ->from('tbl_allocate')
+		    ->where('id_salesReport=:id_SO or id_salesReport=:id_DO or id_salesReport=:id_INV', array(':id_SO'=>$SR['id_SO'], ':id_DO'=>$SR['id_DO'], ':id_INV'=>$SR['id_invoice']))
+		    ->queryRow();
+
+		return $salesRep['totAmount'];
 	}
 //---------------------
 }

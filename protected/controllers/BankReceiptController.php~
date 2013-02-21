@@ -182,18 +182,18 @@ class BankReceiptController extends Controller
 		    ->where('id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$data->id_salesReport))
 		    ->queryRow();
 
-		return $data['total'];
+		return number_format($data['total'], 2);
 	}
 
-	public function getIdSR($maho)
+	public function getColor($data) //id_bankReceipt
 	{
-		$data = Yii::app()->db->createCommand()
-		    ->select()
-		    ->from('tbl_sales_report')
-		    ->where('id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$maho))
-		    ->queryRow();
+		//$model->attributes=$_POST['BankReceipt'];
+		$totalAL = Allocate::model()->getTotAl($data->id);
+		$totalBR = Allocate::model()->getTotBR($data->id);
 
-		return $data['id'];
+		if ($totalAL == $totalBR) return "green";
+		if ($totalAL < $totalBR) return "yellow";
+		if ($totalAL == '0') return "normal";
 	}
 
 	public function testValue($data, $row)

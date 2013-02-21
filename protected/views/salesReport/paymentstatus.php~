@@ -78,7 +78,7 @@ if($id==3) { $htmlColor = '#0000ff'; }
 
 		),
 		array(
-			'name'=>'territory',
+			'name'=>'teritory',
 			'type'=>'text',
 			'headerHtmlOptions'=>array('width'=>'90px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),

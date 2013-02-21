@@ -175,9 +175,20 @@ class SalesReportController extends Controller
 	{
 		if ($data->status == 0) {
 			$command = Yii::app()->db->createCommand();
-			$users = $command->select("DATEDIFF('$data->due_date', NOW()) as latedays")->from('tbl_sales_report')->queryAll();
-			return $users[0]['latedays'].' days';
+			$users = $command->select("DATEDIFF('$data->due_date', NOW()) as ageDays")->from('tbl_sales_report')->queryAll();
+			return $users[0]['ageDays'].' days';
 		} else { return '-'; }
+	}
+
+	public function lateTime($data)
+	{
+		$command = Yii::app()->db->createCommand();
+		if ($data->payment_date=='0000-00-00') {
+			$users = $command->select("DATEDIFF('$data->due_date', NOW()) as lateDays")->from('tbl_sales_report')->queryAll();
+		} else {
+			$users = $command->select("DATEDIFF('$data->due_date', '$data->payment_date') as lateDays")->from('tbl_sales_report')->queryAll();
+		}
+		return $users[0]['lateDays'].' days';
 	}
 
 	public function actionpaymentstatus()

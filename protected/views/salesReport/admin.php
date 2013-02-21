@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List SalesReport', 'url'=>array('admin')),
-	//array('label'=>'Create SalesReport', 'url'=>array('create')),
+	array('label'=>'Manage Late Payment', 'url'=>array('paymentstatus&id=1')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -77,7 +77,7 @@ $('.search-form form').submit(function(){
 
 		),
 		array(
-			'name' => 'temp',
+			'name' => 'ageDays',
 			'header'=>'Aging',
 			'type'=>'raw',
 			'htmlOptions'=>array('style'=>'text-align: center;'),
@@ -85,12 +85,12 @@ $('.search-form form').submit(function(){
 			'value'=> array($this,'agetime'),
 		),
 		array(
-			'name' => 'temp',
+			'name' => 'lateDays',
 			'header'=>'Late Pay',
 			'type'=>'raw',
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 			'headerHtmlOptions'=>array('width'=>'50px'),
-			'value'=> array($this,'agetime'),
+			'value'=> array($this,'lateTime'),
 		),
 		'customer',
 		array(

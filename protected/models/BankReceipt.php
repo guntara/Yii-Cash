@@ -110,4 +110,33 @@ class BankReceipt extends CActiveRecord
 			),
 		));
 	}
+
+//-----------------------------------------------------------------------------------------//
+
+	public static function getSumPay($id_bR)
+	{
+		$totalPay=0;
+		$countPay=0;
+		$provider = Allocate::model()->findAll('id_bankReceipt = :idBR',array(':idBR'=>$id_bR));
+		foreach($provider as $data)
+		{
+			$totalPay += $data->amount;
+			$countPay++;
+		}
+		return $totalPay.'_'.$countPay;
+	}
+
+	public function getColor($data) //id_bankReceipt
+	{
+		//$model->attributes=$_POST['BankReceipt'];
+		$totalAL = Allocate::model()->getTotAl($data->id);
+		$totalBR = Allocate::model()->getTotBR($data->id);
+
+		if ($totalAL == $totalBR) $color="green";
+		if ($totalAL < $totalBR) $color="yellow";
+		if ($totalAL===0) $color="normal";
+		return $color;
+	}
+
+//-----------------------------------------------------------------------------------------//
 }

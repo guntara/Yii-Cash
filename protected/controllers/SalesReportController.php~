@@ -26,18 +26,19 @@ class SalesReportController extends Controller
 	 */
 	public function accessRules()
 	{
+		//set access rules
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('admin','update','paymentstatus'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('create','delete'),
+				'users'=>Yii::app()->getModule('user')->getAdmins(),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -170,14 +171,24 @@ class SalesReportController extends Controller
 	}
 
 // ----------------------------
-
 	public function agetime($data)
 	{
 		if ($data->status == 0) {
 			$command = Yii::app()->db->createCommand();
-			$users = $command->select("DATEDIFF('$data->due_date', NOW()) as latedays")->from('tbl_sales_report')->queryAll();
-			return $users[0]['latedays'].' days';
+			$users = $command->select("DATEDIFF('$data->due_date', NOW()) as ageDays")->queryAll();
+			return $users[0]['ageDays'].' days';
 		} else { return '-'; }
+	}
+
+	public function lateTime($data)
+	{
+		$command = Yii::app()->db->createCommand();
+		if ($data->payment_date=='0000-00-00') {
+			$users = $command->select("DATEDIFF('$data->due_date', NOW()) as lateDays")->from('tbl_sales_report')->queryAll();
+		} else {
+			$users = $command->select("DATEDIFF('$data->due_date', '$data->payment_date') as lateDays")->from('tbl_sales_report')->queryAll();
+		}
+		return $users[0]['lateDays'].' days';
 	}
 
 	public function actionpaymentstatus()
@@ -185,5 +196,4 @@ class SalesReportController extends Controller
 		$this->render('paymentstatus');
 	}
 // ----------------------------
-
 }

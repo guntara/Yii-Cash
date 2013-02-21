@@ -3,12 +3,12 @@
 /* @var $model SalesReport */
 
 $this->breadcrumbs=array(
-	'Sales Reports'=>array('index'),
+	'Sales Reports'=>array('admin'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List SalesReport', 'url'=>array('index')),
+	array('label'=>'List SalesReport', 'url'=>array('admin')),
 	//array('label'=>'Create SalesReport', 'url'=>array('create')),
 );
 
@@ -37,6 +37,7 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'sales-report-grid',
 	'dataProvider'=>$model->search(),
+	'rowCssClassExpression'=>'($data->status==0)?"normal":"green"',
 	'filter'=>$model,
 	'columns'=>array(
 		array(
@@ -76,7 +77,7 @@ $('.search-form form').submit(function(){
 
 		),
 		array(
-			'name' => 'temp',
+			'name' => 'ageDays',
 			'header'=>'Aging',
 			'type'=>'raw',
 			'htmlOptions'=>array('style'=>'text-align: center;'),
@@ -84,18 +85,18 @@ $('.search-form form').submit(function(){
 			'value'=> array($this,'agetime'),
 		),
 		array(
-			'name' => 'temp',
+			'name' => 'lateDays',
 			'header'=>'Late Pay',
 			'type'=>'raw',
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 			'headerHtmlOptions'=>array('width'=>'50px'),
-			'value'=> array($this,'agetime'),
+			'value'=> array($this,'lateTime'),
 		),
 		'customer',
 		array(
 			'name'=>'total',
 			'type'=>'text',
-			'value'=>number_format($model->total, 2),
+			'value'=>function($data){ return number_format($data->total, 2); },
 			'headerHtmlOptions'=>array('width'=>'90px'),
 			'htmlOptions'=>array('style'=>'text-align: right;'),
 
