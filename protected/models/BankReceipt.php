@@ -14,6 +14,8 @@
  */
 class BankReceipt extends CActiveRecord
 {
+	public $from_date;
+	public $to_date;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -48,7 +50,7 @@ class BankReceipt extends CActiveRecord
 			array('bank, cabang', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, tanggal, keterangan, jumlah, bank, cabang, create_at', 'safe', 'on'=>'search'),
+			array('id, tanggal, keterangan, jumlah, bank, cabang, create_at, from_date, to_date', 'safe', 'on'=>'search, cashbydate'),
 		);
 	}
 
@@ -111,6 +113,29 @@ class BankReceipt extends CActiveRecord
 		));
 	}
 
+	public function cashbydate($from_date, $to_date)
+	{
+		$criteria=new CDbCriteria;
+
+		if(!empty($from_date) && empty($to_date)){
+			$criteria->condition = "tanggal >= '$from_date' and tanggal <= CURDATE()";
+		}elseif(!empty($to_date) && empty($from_date)){
+			$criteria->condition = "tanggal <= '$to_date'";
+		}elseif(!empty($to_date) && !empty($from_date)){
+			$criteria->condition = "tanggal >= '$from_date' and tanggal <= '$to_date'";
+		}else {$criteria->condition = "tanggal = CURDATE()";}
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 50,
+			),
+			'sort' => array(
+				'defaultOrder' => 'tanggal asc',
+			),
+		));
+	}
+
 //-----------------------------------------------------------------------------------------//
 
 	public static function getSumPay($id_bR)
@@ -124,6 +149,27 @@ class BankReceipt extends CActiveRecord
 			$countPay++;
 		}
 		return $totalPay.'_'.$countPay;
+	}
+
+	public static function getSumbyDate($from_date, $to_date)
+	{
+		$total=0;
+		$count=0;
+
+		if(!empty($from_date) && empty($to_date)){
+			$provider = BankReceipt::model()->findAll('tanggal >= :from AND tanggal <= CURDATE()',array(':from'=>$from_date));
+		}elseif(!empty($to_date) && empty($from_date)){
+			$provider = BankReceipt::model()->findAll('tanggal <= :to',array(':to'=>$to_date));
+		}elseif(!empty($to_date) && !empty($from_date)){
+			$provider = BankReceipt::model()->findAll('tanggal >= :from AND tanggal <= :to',array(':from'=>$from_date, ':to'=>$to_date));
+		}else {$provider = BankReceipt::model()->findAll('tanggal = CURDATE()');}
+
+		foreach($provider as $data)
+		{
+			$total += $data->jumlah;
+			$count++;
+		}
+		return $total.'_'.$count;
 	}
 
 	public function getColor($data) //id_bankReceipt

@@ -157,4 +157,52 @@ class SalesReport extends CActiveRecord
 			),
 		));
 	}
+
+	public function dailyar()
+	{
+		$criteria = new CDbCriteria; //SELECT * FROM `tbl_sales_report` WHERE DATE(`update_at`)=CURDATE()
+		$criteria->condition = 'DATE(`update_at`)=CURDATE()';
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 20,
+			),
+			'sort' => array(
+				'defaultOrder' => 'due_date desc',
+			),
+		));
+	}
+
+	public function weeklyar()
+	{
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'DATE(`update_at`) > DATE_ADD(CURDATE(), INTERVAL -7 DAY)';
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 20,
+			),
+			'sort' => array(
+				'defaultOrder' => 'due_date desc',
+			),
+		));
+	}
+
+	public function weeklydn()
+	{
+		$criteria = new CDbCriteria;
+		$criteria->condition = '`posting_date` > DATE_ADD(CURDATE(), INTERVAL -7 DAY)';
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 20,
+			),
+			'sort' => array(
+				'defaultOrder' => 'posting_date asc',
+			),
+		));
+	}
 }

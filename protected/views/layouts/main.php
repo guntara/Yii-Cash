@@ -38,6 +38,7 @@
 				array('label'=>'CSV Importer', 'url'=>array('/importcsv'), 'visible'=>Yii::app()->getModule('user')->isAdmin()),
 				array('label'=>'Bank Receipt', 'url'=>array('/bankReceipt/admin'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Sales Report', 'url'=>array('/salesReport/admin'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Report', 'url'=>array('/bankReceipt/cash'), 'visible'=>!Yii::app()->user->isGuest),
 				array('url'=>Yii::app()->getModule('user')->logoutUrl, 'label'=>Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', 'visible'=>!Yii::app()->user->isGuest),
 			),
 		)); ?>

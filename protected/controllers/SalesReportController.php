@@ -33,7 +33,7 @@ class SalesReportController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('admin','update','paymentstatus'),
+				'actions'=>array('admin','update','paymentstatus','dailyar','weeklyar','weeklydn'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -194,6 +194,21 @@ class SalesReportController extends Controller
 	public function actionpaymentstatus()
 	{
 		$this->render('paymentstatus');
+	}
+
+	public function actiondailyar()
+	{
+		$this->render('dailyar');
+	}
+
+	public function actionweeklyar()
+	{
+		$this->render('weeklyar');
+	}
+
+	public function actionweeklydn()
+	{
+		$this->render('weeklydn');
 	}
 // ----------------------------
 }
