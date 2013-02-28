@@ -189,17 +189,22 @@ class BankReceiptController extends Controller
 	{
 		unset(Yii::app()->request->cookies['from_date']);  // first unset cookie for dates
 		unset(Yii::app()->request->cookies['to_date']);
-		 
+
 		$model=new BankReceipt('cashbydate');
 		$model->unsetAttributes();
-		 
+
 		if(!empty($_POST))
 		{
 			Yii::app()->request->cookies['from_date'] = new CHttpCookie('from_date', $_POST['from_date']);
 			Yii::app()->request->cookies['to_date'] = new CHttpCookie('to_date', $_POST['to_date']);
 		}
-		//CVarDumper::dump($model->from_date .' - '. $model->to_date);
-		$this->render('cash');
+
+		if(isset($_GET['BankReceipt']))
+			$model->attributes=$_GET['BankReceipt'];
+
+		$this->render('cash',array(
+			'model'=>$model,
+		));
 	}
 //---------------------
 

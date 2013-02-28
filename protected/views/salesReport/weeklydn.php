@@ -23,7 +23,7 @@ $this->menu=array(
 	'columns'=>array(
 		array(
 			'header'=>'No',
-			'value'=>'$row+1',       //  row is zero based
+			'value'=>'$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',//  row is zero based
 			'headerHtmlOptions'=>array('width'=>'15px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 		),

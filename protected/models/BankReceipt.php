@@ -113,25 +113,31 @@ class BankReceipt extends CActiveRecord
 		));
 	}
 
-	public function cashbydate($from_date, $to_date)
+	public function cashbydate()
 	{
 		$criteria=new CDbCriteria;
 
-		if(!empty($from_date) && empty($to_date)){
-			$criteria->condition = "tanggal >= '$from_date' and tanggal <= CURDATE()";
-		}elseif(!empty($to_date) && empty($from_date)){
-			$criteria->condition = "tanggal <= '$to_date'";
-		}elseif(!empty($to_date) && !empty($from_date)){
-			$criteria->condition = "tanggal >= '$from_date' and tanggal <= '$to_date'";
+		$criteria->compare('id',$this->id);
+		$criteria->compare('tanggal',$this->tanggal,true);
+		$criteria->compare('keterangan',$this->keterangan,true);
+		$criteria->compare('jumlah',$this->jumlah);
+		$criteria->compare('bank',$this->bank,true);
+		$criteria->compare('cabang',$this->cabang,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('create_at',$this->create_at,true);
+
+		if(!empty($this->from_date) && empty($this->to_date)){
+			$criteria->condition = "tanggal >= '$this->from_date' and tanggal <= CURDATE()";
+		}elseif(!empty($this->to_date) && empty($this->from_date)){
+			$criteria->condition = "tanggal <= '$this->to_date'";
+		}elseif(!empty($this->to_date) && !empty($this->from_date)){
+			$criteria->condition = "tanggal >= '$this->from_date' and tanggal <= '$this->to_date'";
 		}else {$criteria->condition = "tanggal = CURDATE()";}
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination' => array(
-				'pageSize' => 50,
-			),
-			'sort' => array(
-				'defaultOrder' => 'tanggal asc',
+				'pageSize'=>Yii::app()->user->getState('pageSize',Yii::app()->params['defaultPageSize']),
 			),
 		));
 	}

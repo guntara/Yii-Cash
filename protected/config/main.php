@@ -20,6 +20,7 @@ return array(
 		'application.modules.user.components.*',
 		'application.modules.rights.*',
 		'application.modules.rights.components.*',
+		'ext.PageSize.PageSize',
 	),
 	'modules'=>array(
 		'gii'=>array(
@@ -105,5 +106,7 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'samson@sinaga.or.id',
+		'defaultPageSize' => 10,
+		'pageSizeOptions'=>array(10=>10,20=>20,50=>50,100=>100),
 	),
 );

@@ -1,7 +1,7 @@
 <?php
 /* @var $this BankReceiptController */
 /* @var $model BankReceipt */
-
+$model = new BankReceipt;
 $this->breadcrumbs=array(
 	'Bank Receipts'=>array('index'),
 	'Manage',
@@ -23,13 +23,13 @@ $this->menu=array(
  
 <b>From :</b>
 <?php
-$from_date = Yii::app()->request->cookies['from_date'];
-$to_date = (isset(Yii::app()->request->cookies['to_date'])) ? Yii::app()->request->cookies['to_date']->value : '';
-//CVarDumper::dump($from_date .' - '. $to_date);
+$model->from_date = (isset(Yii::app()->request->cookies['from_date'])) ? Yii::app()->request->cookies['from_date']->value : '';
+$model->to_date = (isset(Yii::app()->request->cookies['to_date'])) ? Yii::app()->request->cookies['to_date']->value : '';
+//CVarDumper::dump($model->from_date .' - '. $model->to_date);
 
 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 	'name'=>'from_date',  // name of post parameter
-	'value'=>$from_date,
+	'value'=>$model->from_date,
 	'options'=>array(
 		'showAnim'=>'fold',
 		'dateFormat'=>'yy-mm-dd',
@@ -44,7 +44,7 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 <?php
 $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 	'name'=>'to_date',
-	'value'=>$to_date,
+	'value'=>$model->to_date,
 	'options'=>array(
 		'showAnim'=>'fold',
 		'dateFormat'=>'yy-mm-dd',
@@ -57,10 +57,17 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 <?php echo CHtml::submitButton('Go'); ?>
 <?php $this->endWidget(); ?>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+$dataProvider = $model->cashbydate();
+$dataProvider->pagination = array('pageSize' => 100);
+$dataProvider->sort = array('defaultOrder' => 'tanggal ASC');
+
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'cash-status-grid',
-	'dataProvider'=>BankReceipt::model()->cashbydate($from_date, $to_date),
+	'dataProvider'=>$dataProvider,
 	'rowCssClassExpression'=>'$data->getColor($this->dataProvider->data[$row])',
+	'enablePagination' => false,
+	'template'=>'{items}',
 	'columns'=>array(
 		array(
 			'name'=>'tanggal',
@@ -101,14 +108,10 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 	),
 ));
 ?>
-
-<br>
-<div style="border-top:1px solid silver; border-bottom:1px solid silver; background: #EEEEEE; padding:10px;">
+<div align="right" style="border-top:1px solid silver; border-bottom:1px solid silver; background: #EEEEEE; padding:10px;">
 <?php
-if ($data = explode('_', BankReceipt::model()->getSumbyDate($from_date, $to_date))) {
-	echo '<table border=0>';
-	echo '<tr><td width=150>Total of Cash In  </td><td width=5>:</td><td><b>'.number_format($data[0],2).'</b></td></tr>';
-	echo '</table>';
+if ($data = explode('_', BankReceipt::model()->getSumbyDate($model->from_date, $model->to_date))) {
+	echo 'Total of Cash In  &nbsp; &nbsp; : &nbsp; <b>'.number_format($data[0],2).'</b>';
 }
 ?>
 </div>
