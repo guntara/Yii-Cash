@@ -3,15 +3,15 @@
 /* @var $model SalesReport */
 
 $this->breadcrumbs=array(
-	'Payment Status'=>array('paymentstatus&id=1'),
+	'Payment Status'=>array("paymentstatus","id"=>1),
 	'Manage',
 );
 
 $this->menu=array(
 	array('label'=>'Manage SalesReport', 'url'=>array('admin')),
-	array('label'=>'Late Payment (>7 Days)', 'url'=>array('paymentstatus&id=1')),
-	array('label'=>'Late Payment (<7 Days)', 'url'=>array('paymentstatus&id=2')),
-	array('label'=>'Upcoming Payment (7 Days)', 'url'=>array('paymentstatus&id=3')),
+	array('label'=>'Late Payment (>7 Days)', 'url'=>array("paymentstatus","id"=>1)),
+	array('label'=>'Late Payment (<7 Days)', 'url'=>array("paymentstatus","id"=>2)),
+	array('label'=>'Upcoming Payment (7 Days)', 'url'=>array("paymentstatus","id"=>3)),
 );
 
 $id = $_GET['id'];

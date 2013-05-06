@@ -47,4 +47,6 @@ $found = BankReceipt::model()->findAll('id = :id', array(':id' => $_GET['id']));
 	<br />
 </div>
 <?php endforeach ?>
-<?php echo $this->renderPartial('_form', array('model'=>$model, 'id_bankReceipt'=>$_GET['id'])); ?>
+<div class="view">
+	<?php echo $this->renderPartial('_form', array('model'=>$model, 'id_bankReceipt'=>$_GET['id'])); ?>
+</div>

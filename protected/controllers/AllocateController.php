@@ -78,7 +78,7 @@ class AllocateController extends Controller
 				$totalSR *= 10;
 				$payed = Allocate::model()->getPayedSR($model->id_salesReport);
 
-				if ($totalSR == $payed) {
+				if ($totalSR <= $payed) {
 				$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `status`=1, `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR;}
 				else {	$sql = 'UPDATE `tbl_sales_report` SET `update_at`=now(), `payment_date`=\''. $model->tanggal .'\' WHERE id='. $idSR; }
 				Yii::app()->db->createCommand($sql)->execute();

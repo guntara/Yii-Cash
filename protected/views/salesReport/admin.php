@@ -1,38 +1,16 @@
 <?php
-/* @var $this SalesReportController */
-/* @var $model SalesReport */
-
 $this->breadcrumbs=array(
-	'Sales Reports'=>array('admin'),
+	'Sales Reports'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
 	array('label'=>'List SalesReport', 'url'=>array('admin')),
-	array('label'=>'Manage Late Payment', 'url'=>array('paymentstatus&id=1')),
+	array('label'=>'Manage Late Payment', 'url'=>array("paymentstatus","id"=>1)),
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('sales-report-grid', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1>Manage Sales Reports</h1>
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'sales-report-grid',
@@ -43,45 +21,49 @@ $('.search-form form').submit(function(){
 		array(
 			'name'=>'id_SO',
 			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'65px'),
+			'headerHtmlOptions'=>array('width'=>'100px'),
 			'htmlOptions'=>array('style'=>'text-align: left;'),
-
 		),
 		array(
 			'name'=>'id_DO',
 			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'65px'),
+			'headerHtmlOptions'=>array('width'=>'100px'),
 			'htmlOptions'=>array('style'=>'text-align: left;'),
-
 		),
 		array(
 			'name'=>'id_invoice',
 			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'65px'),
+			'headerHtmlOptions'=>array('width'=>'100px'),
 			'htmlOptions'=>array('style'=>'text-align: left;'),
-
 		),
 		array(
 			'name'=>'posting_date',
 			'header'=>'Post Date',
-			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'70px'),
+			'headerHtmlOptions'=>array('width'=>'80px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),
-
+			'class'=>'ext.EFilterDatePicker',
+			'model'=>$model,
+			'attribute'=>'posting_date',
+			'options'=>array(
+				'showAnim'=>'fade',
+				'changeYear'=>true,
+				'changeMonth'=>true,
+				'dateFormat'=>'yy-mm-dd',
+			),
 		),
-		array(
-			'name'=>'due_date',
+		/*array(
+			'name'=>'posting_date',
+			'header'=>'Post Date',
 			'type'=>'text',
-			'headerHtmlOptions'=>array('width'=>'70px'),
+			'headerHtmlOptions'=>array('width'=>'80px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),
-
-		),
+		),*/
 		array(
 			'name' => 'ageDays',
 			'header'=>'Aging',
 			'type'=>'raw',
 			'htmlOptions'=>array('style'=>'text-align: center;'),
-			'headerHtmlOptions'=>array('width'=>'50px'),
+			'headerHtmlOptions'=>array('width'=>'60px'),
 			'value'=> array($this,'agetime'),
 		),
 		array(
@@ -89,10 +71,18 @@ $('.search-form form').submit(function(){
 			'header'=>'Late Pay',
 			'type'=>'raw',
 			'htmlOptions'=>array('style'=>'text-align: center;'),
-			'headerHtmlOptions'=>array('width'=>'50px'),
+			'headerHtmlOptions'=>array('width'=>'60px'),
 			'value'=> array($this,'lateTime'),
 		),
 		'customer',
+		array(
+			'name'=>'user_id',
+			'type'=>'text',
+			'headerHtmlOptions'=>array('width'=>'80px'),
+			'htmlOptions'=>array('style'=>'text-align: center;'),
+			'value'=> array($this,'namaUser'),
+			'filter'=> Users::model()->getListSales(),
+		),
 		array(
 			'name'=>'total',
 			'type'=>'text',

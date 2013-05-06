@@ -14,6 +14,7 @@
  * @property double $quantity
  * @property string $uom
  * @property string $territory
+ * @property integer $user_id
  * @property string $sales_term
  * @property double $total
  * @property integer $status
@@ -52,16 +53,13 @@ class SalesReport extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, territory, sales_term, total, payment_date, create_at', 'required'),
-			array('status', 'numerical', 'integerOnly'=>true),
+			array('id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, territory, user_id, sales_term, total', 'required'),
+			array('user_id, status', 'numerical', 'integerOnly'=>true),
 			array('quantity, total', 'numerical'),
-			array('id_SO, id_DO, id_invoice, uom', 'length', 'max'=>10),
-			array('customer, sales_term', 'length', 'max'=>50),
-			array('territory', 'length', 'max'=>20),
 			array('update_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, territory, sales_term, total, status, payment_date, create_at, update_at', 'safe', 'on'=>'search'),
+			array('id, id_SO, id_DO, id_invoice, posting_date, due_date, customer, quantity, uom, territory, user_id, sales_term, total, status, payment_date, create_at, update_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -92,6 +90,7 @@ class SalesReport extends CActiveRecord
 			'quantity' => 'Qty',
 			'uom' => 'UOM',
 			'territory' => 'Territory',
+			'user_id' => 'Sales Person',
 			'sales_term' => 'Sales Term',
 			'total' => 'Total',
 			'status' => 'Status',
@@ -122,6 +121,7 @@ class SalesReport extends CActiveRecord
 		$criteria->compare('quantity',$this->quantity);
 		$criteria->compare('uom',$this->uom,true);
 		$criteria->compare('territory',$this->territory,true);
+		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('sales_term',$this->sales_term,true);
 		$criteria->compare('total',$this->total);
 		$criteria->compare('status',$this->status);
@@ -132,10 +132,10 @@ class SalesReport extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination' => array(
-				'pageSize' => 20,
+				'pageSize' => 25,
 			),
 			'sort' => array(
-				'defaultOrder' => 'id desc',
+				'defaultOrder' => 'posting_date DESC, id_SO desc',
 			),
 		));
 	}
@@ -204,5 +204,18 @@ class SalesReport extends CActiveRecord
 				'defaultOrder' => 'posting_date asc',
 			),
 		));
+	}
+
+	public function filterSales()
+	{
+		$id = User::model()->findAllByAttributes(array('username'=>$value));
+		$data = Profiles::model()->findByPK($id[0]['id']);
+		$arrSM = Users::model()->getAllSales();
+		$codes = self::model()->findAll();
+		$data = array(); // data to be returned
+		foreach ($codes as $c) {
+			$data[$c->id] = $c->code;
+		}
+		return $data;
 	}
 }

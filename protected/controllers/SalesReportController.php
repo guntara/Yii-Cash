@@ -15,7 +15,6 @@ class SalesReportController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -26,7 +25,6 @@ class SalesReportController extends Controller
 	 */
 	public function accessRules()
 	{
-		//set access rules
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
@@ -111,11 +109,17 @@ class SalesReportController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		if(Yii::app()->request->isPostRequest)
+		{
+			// we only allow deletion via POST request
+			$this->loadModel($id)->delete();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+			if(!isset($_GET['ajax']))
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		}
+		else
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
 	/**
@@ -171,6 +175,13 @@ class SalesReportController extends Controller
 	}
 
 // ----------------------------
+	public function namaUser($data)
+	{
+		$data = Profiles::model()->findByPK($data->user_id);
+		$nama = $data->firstname . ' ' . $data->lastname;
+		return $nama;
+	}
+
 	public function agetime($data)
 	{
 		if ($data->status == 0) {

@@ -8,9 +8,13 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Cash Receipt Web Application',
+	'theme'=>'bootstrap',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array(
+		'log',
+		'bootstrap',
+	),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -26,9 +30,9 @@ return array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'jagiring',
+			'generatorPaths' => array('bootstrap.gii'),
 			//'ipFilters'=>array('127.0.0.1','::1'),
 		),
-
 		'user'=>array(
 			'tableUsers' => 'tbl_users',
 			'tableProfiles' => 'tbl_profiles',
@@ -57,8 +61,10 @@ return array(
 			'connectionID'=>'db',
 			'defaultRoles'=>array('Authenticated', 'Guest'),
 		),
-		// uncomment the following to enable URLs in path-format
-		/*
+		'bootstrap' => array(
+			'class' => 'ext.bootstrap.components.Bootstrap',
+			'responsiveCss' => true,
+		),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -67,6 +73,7 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
+		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),

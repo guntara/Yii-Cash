@@ -1,15 +1,12 @@
 <?php
-/* @var $this SalesReportController */
-/* @var $model SalesReport */
-
 $this->breadcrumbs=array(
 	'Sales Reports'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List SalesReport', 'url'=>array('index')),
-	array('label'=>'Manage SalesReport', 'url'=>array('admin')),
+	array('label'=>'List SalesReport','url'=>array('index')),
+	array('label'=>'Manage SalesReport','url'=>array('admin')),
 );
 ?>
 

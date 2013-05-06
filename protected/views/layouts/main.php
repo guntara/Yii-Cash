@@ -28,7 +28,32 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+	<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+	'type'=>'inverse', // null or 'inverse'
+	'brand'=>'SAP',
+	'brandUrl'=>'#',
+	'collapse'=>true, // requires bootstrap-responsive.css
+	'items'=>array(
+		array(
+			'class'=>'bootstrap.widgets.TbMenu',
+			'items'=>array(
+				array('label'=>'Home', 'icon'=>'home', 'url'=>array('/site/index')),
+				array('label'=>'Bank Receipt', 'icon'=>'book', 'url'=>array('/bankReceipt/admin'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Sales Report', 'icon'=>'book', 'url'=>array('/salesReport/admin'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Report', 'icon'=>'book', 'url'=>array('/bankReceipt/cash'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Tools', 'icon'=>'cog', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
+					array('label'=>'Accessibility', 'url'=>array('/accessibility/admin'), 'visible'=>Yii::app()->getModule('user')->isAdmin()),
+					array('label'=>"Profile", 'url'=>Yii::app()->getModule('user')->profileUrl, 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'CSV Importer', 'url'=>array('/importcsv'), 'visible'=>Yii::app()->getModule('user')->isAdmin()),
+					)),
+				array('label'=>'Login', 'icon'=>'cog', 'url'=>Yii::app()->User->loginUrl, 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				),
+			),
+		),
+	));
+
+		/*$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('url'=>Yii::app()->getModule('user')->loginUrl, 'label'=>Yii::app()->getModule('user')->t("Login"), 'visible'=>Yii::app()->user->isGuest),
@@ -41,7 +66,7 @@
 				array('label'=>'Report', 'url'=>array('/bankReceipt/cash'), 'visible'=>!Yii::app()->user->isGuest),
 				array('url'=>Yii::app()->getModule('user')->logoutUrl, 'label'=>Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', 'visible'=>!Yii::app()->user->isGuest),
 			),
-		)); ?>
+		));*/ ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

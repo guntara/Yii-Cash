@@ -1,100 +1,48 @@
-<?php
-/* @var $this SalesReportController */
-/* @var $model SalesReport */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'id',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id_SO'); ?>
-		<?php echo $form->textField($model,'id_SO',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'id_SO',array('class'=>'span5','maxlength'=>15)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id_DO'); ?>
-		<?php echo $form->textField($model,'id_DO',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'id_DO',array('class'=>'span5','maxlength'=>15)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id_invoice'); ?>
-		<?php echo $form->textField($model,'id_invoice',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'id_invoice',array('class'=>'span5','maxlength'=>15)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'posting_date'); ?>
-		<?php echo $form->textField($model,'posting_date'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'posting_date',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'due_date'); ?>
-		<?php echo $form->textField($model,'due_date'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'due_date',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'customer'); ?>
-		<?php echo $form->textField($model,'customer',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'customer',array('class'=>'span5','maxlength'=>50)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'quantity'); ?>
-		<?php echo $form->textField($model,'quantity'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'quantity',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'uom'); ?>
-		<?php echo $form->textField($model,'uom',array('size'=>10,'maxlength'=>10)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'uom',array('class'=>'span5','maxlength'=>10)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'territory'); ?>
-		<?php echo $form->textField($model,'territory',array('size'=>20,'maxlength'=>20)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'territory',array('class'=>'span5','maxlength'=>20)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'sales_term'); ?>
-		<?php echo $form->textField($model,'sales_term',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'user_id',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'total'); ?>
-		<?php echo $form->textField($model,'total'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'sales_term',array('class'=>'span5','maxlength'=>50)); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'total',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'payment_date'); ?>
-		<?php echo $form->textField($model,'payment_date'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'status',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'create_at'); ?>
-		<?php echo $form->textField($model,'create_at'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'payment_date',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'update_at'); ?>
-		<?php echo $form->textField($model,'update_at'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'create_at',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<?php echo $form->textFieldRow($model,'update_at',array('class'=>'span5')); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType' => 'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

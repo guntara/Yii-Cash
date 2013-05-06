@@ -1,10 +1,9 @@
 .grid-view table.items tr.normal
 {
 	background: #F8F8F8;
-	color: #000;
 }
 
-.grid-view table.items tr.green
+.grid-view table.items table.table-striped table.table-bordered table.table-condensed tr.green
 {
 	background: #57f65f;
 }
@@ -29,4 +28,5 @@
 	background: #0000ff;
 }
 
-/**/
+/*
+	color: #0000ff;*/
