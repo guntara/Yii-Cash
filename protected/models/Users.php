@@ -187,6 +187,8 @@ class Users extends CActiveRecord
 			$user = User::model()->findByPK($result->user_id);
 			$userSM[] = $user->username;
 		}
+		$user = User::model()->findByPK(1);
+		$userSM[] = $user->username;
 		return $userSM;
 	}
 

@@ -33,10 +33,13 @@
 					array('label'=>'Sales Monthly Target', 'url'=>array('/salesTarget/motarget'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'Sales Target', 'url'=>array('/salesTarget/admin'), 'visible'=>!Yii::app()->user->isGuest),
 					array('label'=>'Sales Report', 'url'=>array('/salesReport/admin'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Manage Territory', 'url'=>array('/territory/admin'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Territory Target', 'url'=>array('/territoryTarget/admin'), 'visible'=>!Yii::app()->user->isGuest),
 					)),
 				array('label'=>'Report', 'icon'=>'book', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
 					array('label'=>'Bank Report'),
 					array('label'=>'Bank Receipt', 'url'=>array('/bankReceipt/cash'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Cash In', 'url'=>array('/salesReport/cashin'), 'visible'=>!Yii::app()->user->isGuest),
 					'---',
 					array('label'=>'AR Report'),
 					array('label'=>'Daily Report', 'url'=>array('/salesReport/dailyar'), 'visible'=>!Yii::app()->user->isGuest),
@@ -45,7 +48,7 @@
 					'---',
 					array('label'=>'Sales Report'),
 					array('label'=>'Daily Sales Report', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
-					array('label'=>'Territory Sales Report', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Territory Sales Report', 'url'=>array('/territoryTarget/motarget'), 'visible'=>!Yii::app()->user->isGuest),
 					)),
 				array('label'=>'Tools', 'icon'=>'cog', 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
 					array('label'=>"Profile", 'url'=>Yii::app()->getModule('user')->profileUrl, 'visible'=>!Yii::app()->user->isGuest),

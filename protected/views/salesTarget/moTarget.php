@@ -33,6 +33,7 @@ if (isset($_POST['prd'])){
 <tbody>
 	<?php
 	$i=1;
+	$totalTarget = 0; $totalReal = 0;
 	$arrSM = Users::model()->getAllSales();
 	foreach($arrSM as $key => $value) {
 		$id = User::model()->findAllByAttributes(array('username'=>$value));
@@ -42,12 +43,19 @@ if (isset($_POST['prd'])){
 	?>
 	<tr>
 		<td style="width: 60px"><?php echo $i; ?></td>
-		<td><?php echo $data->firstname . ' ' . $data->lastname; ?></td>
-		<td><?php print_r (number_format($mytarget, 2)); ?></td>
-		<td><?php print_r (number_format($rltarget, 2)); ?></td>
-		<td><?php if (number_format($mytarget, 2)==='0.00') { print_r ('100%');} else {print_r (number_format($rltarget/$mytarget*100, 2).'%');} ?></td>
+		<td><?php if ($data->user_id==1) echo "Others"; else echo $data->firstname . ' ' . $data->lastname; ?></td>
+		<td style="text-align:right;padding-right:50px;"><?php print_r (number_format($mytarget, 2)); ?></td>
+		<td style="text-align:right;padding-right:50px;"><?php print_r (number_format($rltarget, 2)); ?></td>
+		<td style="text-align:center;"><?php if (number_format($mytarget, 2)==='0.00') { print_r ('100%');} else {print_r (number_format($rltarget/$mytarget*100, 2).'%');} ?></td>
 	</tr>
-	<?php $i++; } ?>
+	<?php $i++; $totalTarget += $mytarget;  $totalReal += $rltarget; } ?>
+	<tr>
+		<td></td>
+		<td style="text-align:right;">Total : </td>
+		<td style="text-align:right;padding-right:50px;"><?php print_r (number_format($totalTarget, 2)); ?></td>
+		<td style="text-align:right;padding-right:50px;"><?php print_r (number_format($totalReal, 2)); ?></td>
+		<td style="text-align:center;"><?php if ($totalTarget==0) print_r ('100%'); else print_r (number_format($totalReal/$totalTarget*100, 2).'%'); ?></td>
+	</tr>
 </tbody>
 </table>
 </div>

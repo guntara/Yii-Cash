@@ -3,7 +3,7 @@
  * ImportCSV Module
  *
  * @author Artem Demchenkov <lunoxot@mail.ru>
- * @version 0.0.1
+ * @version 0.0.3
  *
  *
  *
@@ -29,7 +29,7 @@ elseif ($error==0) {
 
     ?>
     <script type="text/javascript">
-        window.parent.toSecondStep("<?php echo $uploadfile;?>", "<?php echo $delimiterFromFile;?>", "<?php echo $tableFromFile;?>");
+        window.parent.toSecondStep("<?php echo $uploadfile;?>", "<?php echo $delimiterFromFile;?>", "<?php echo $tableFromFile;?>", '<?php echo $textDelimiterFromFile;?>');
     </script>
     <?php
 }

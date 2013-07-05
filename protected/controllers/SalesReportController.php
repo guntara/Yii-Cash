@@ -31,7 +31,7 @@ class SalesReportController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('admin','update','paymentstatus','dailyar','weeklyar','weeklydn'),
+				'actions'=>array('admin','cashin','dailyar','update','paymentstatus','weeklyar','weeklydn'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -220,6 +220,16 @@ class SalesReportController extends Controller
 	public function actionweeklydn()
 	{
 		$this->render('weeklydn');
+	}
+
+	public function actionCashIn()
+	{
+		$model=new SalesReport('search');
+		$model->unsetAttributes();  // clear any default values
+
+		$this->render('cashin',array(
+			'model'=>$model,
+		));
 	}
 // ----------------------------
 }

@@ -26,14 +26,16 @@ class SalesTargetController extends Controller
 	public function accessRules()
 	{
 		$arrSM = Users::model()->getAllSales();
+		$allow = Yii::app()->getModule('user')->getAdmins();
+		$allow[] = 'kadir';
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('admin','motarget','myreport','view'),
+				'actions'=>array('admin','chart','motarget','myreport','view'),
 				'users'=>$arrSM,
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','create','delete','motarget','myreport','update','view'),
-				'users'=>Yii::app()->getModule('user')->getAdmins(),
+				'actions'=>array('admin','chart','create','delete','motarget','myreport','update','view'),
+				'users'=>$allow, //Yii::app()->getModule('user')->getAdmins(),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -186,5 +188,10 @@ class SalesTargetController extends Controller
 	public function actionmoTarget()
 	{
 		$this->render('moTarget');
+	}
+
+	public function actionChart()
+	{
+		$this->render('ChartView');
 	}
 }

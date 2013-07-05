@@ -3,16 +3,16 @@
  * ImportCSV Module
  *
  * @author Artem Demchenkov <lunoxot@mail.ru>
- * @version 0.0.1
+ * @version 0.0.3
  *
  * Import result
  */
 
 if($error==1) {
 
-    // first error: No one field is selected
+    // first error: No one column is selected
 
-    echo("<span class='importCsvError'>".Yii::t('importcsvModule.importcsv', 'Error').": ".Yii::t('importcsvModule.importcsv', 'No one field is selected')."</span>");
+    echo("<span class='importCsvError'>".Yii::t('importcsvModule.importcsv', 'Error').": ".Yii::t('importcsvModule.importcsv', 'No one column is selected')."</span>");
 }
 elseif($error==2) {
 

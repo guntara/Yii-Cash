@@ -36,7 +36,7 @@ $this->menu=array(
 			'headerHtmlOptions'=>array('width'=>'100px'),
 			'htmlOptions'=>array('style'=>'text-align: left;'),
 		),
-		array(
+		/*array(
 			'name'=>'posting_date',
 			'header'=>'Post Date',
 			'headerHtmlOptions'=>array('width'=>'80px'),
@@ -50,14 +50,14 @@ $this->menu=array(
 				'changeMonth'=>true,
 				'dateFormat'=>'yy-mm-dd',
 			),
-		),
-		/*array(
+		),*/
+		array(
 			'name'=>'posting_date',
 			'header'=>'Post Date',
 			'type'=>'text',
 			'headerHtmlOptions'=>array('width'=>'80px'),
 			'htmlOptions'=>array('style'=>'text-align: center;'),
-		),*/
+		),
 		array(
 			'name' => 'ageDays',
 			'header'=>'Aging',
@@ -74,7 +74,11 @@ $this->menu=array(
 			'headerHtmlOptions'=>array('width'=>'60px'),
 			'value'=> array($this,'lateTime'),
 		),
-		'customer',
+		array(
+			'name'=>'customer',
+			'type'=>'text',
+			'filter'=> SalesReport::model()->filterCustomer(),
+		),
 		array(
 			'name'=>'user_id',
 			'type'=>'text',
@@ -82,6 +86,14 @@ $this->menu=array(
 			'htmlOptions'=>array('style'=>'text-align: center;'),
 			'value'=> array($this,'namaUser'),
 			'filter'=> Users::model()->getListSales(),
+		),
+		array(
+			'name'=>'territory',
+			'header'=>'Territory',
+			'type'=>'text',
+			'headerHtmlOptions'=>array('width'=>'80px'),
+			'htmlOptions'=>array('style'=>'text-align: center;'),
+			'filter'=> Territory::model()->filterTeritori(),
 		),
 		array(
 			'name'=>'total',

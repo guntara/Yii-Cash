@@ -38,11 +38,9 @@ return array(
 			'tableProfiles' => 'tbl_profiles',
 			'tableProfileFields' => 'tbl_profiles_fields',
 		),
-
 		'rights'=>array(
 			'install'=>false,
 		),
-
 		'importcsv'=>array(
 			'path'=>'upload/importcsv/',
 		),

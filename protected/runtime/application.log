@@ -2843,3 +2843,2054 @@ in /var/www/cash/index.php (13)
 2013/05/02 12:02:47 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
 in /var/www/cash/protected/controllers/SalesReportController.php (144)
 in /var/www/cash/index.php (13)
+2013/05/06 14:10:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bca".' in /var/www/yiiApps/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('bca')
+#1 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/cash/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/cash/index.php/bca
+HTTP_REFERER=http://localhost/cash/index.php/site/index
+---
+2013/05/06 14:25:06 [error] [exception.CException] exception 'CException' with message 'TbFileUpload must specify "model" and "attribute" or "name" property values.' in /var/www/yiiApps/framework/zii/widgets/jui/CJuiInputWidget.php:54
+Stack trace:
+#0 /var/www/cash/protected/extensions/bootstrap/widgets/TbFileUpload.php(99): CJuiInputWidget->resolveNameID()
+#1 /var/www/yiiApps/framework/web/CBaseController.php(174): TbFileUpload->run()
+#2 /var/www/cash/protected/views/site/bca.php(22): CBaseController->widget('bootstrap.widge...', Array)
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', NULL, true)
+#5 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', NULL, true)
+#6 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('bca', NULL, true)
+#7 /var/www/cash/protected/controllers/SiteController.php(112): CController->render('bca')
+#8 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SiteController->actionbca()
+#9 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /var/www/yiiApps/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('bca')
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('site/bca')
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/cash/index.php/site/bca
+HTTP_REFERER=http://localhost/cash/index.php/site/bca
+---
+2013/05/06 14:25:29 [error] [php] Undefined variable: model (/var/www/cash/protected/views/site/bca.php:16)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SiteController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /var/www/cash/protected/controllers/SiteController.php(112): SiteController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SiteController->actionbca()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/CController.php(287): SiteController->runAction()
+#6 /var/www/yiiApps/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/site/bca
+in /var/www/cash/protected/views/site/bca.php (16)
+in /var/www/cash/protected/controllers/SiteController.php (112)
+in /var/www/cash/index.php (13)
+2013/05/06 14:44:26 [error] [php] Undefined variable: model (/var/www/cash/protected/views/site/bca.php:19)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SiteController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SiteController->renderPartial()
+#2 /var/www/cash/protected/controllers/SiteController.php(112): SiteController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SiteController->actionbca()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/CController.php(287): SiteController->runAction()
+#6 /var/www/yiiApps/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): SiteController->run()
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/site/bca
+in /var/www/cash/protected/views/site/bca.php (19)
+in /var/www/cash/protected/controllers/SiteController.php (112)
+in /var/www/cash/index.php (13)
+2013/05/06 14:59:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "csvfile/import".' in /var/www/yiiApps/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('csvfile/import')
+#1 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/cash/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/cash/index.php/csvfile/import
+HTTP_REFERER=http://localhost/cash/index.php/site/index
+---
+2013/05/06 15:00:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/yiiApps/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(271): CController->missingAction('')
+#1 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('')
+#2 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('CsvFile')
+#3 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/cash/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/cash/index.php/CsvFile
+HTTP_REFERER=http://localhost/cash/index.php/gii/controller
+---
+2013/05/06 15:02:58 [warning] [application] Failed to set unsafe attribute "filename" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 09:41:21 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootActiveForm" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /var/www/yiiApps/framework/YiiBase.php:318
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yiiApps/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(CsvFileController), 'bootstrap.widge...', Array)
+#2 /var/www/yiiApps/framework/web/CBaseController.php(190): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/cash/protected/views/csvFile/import.php(23): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#5 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#6 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#7 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('import', Array, true)
+#8 /var/www/cash/protected/controllers/CsvFileController.php(38): CController->render('import', Array)
+#9 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): CsvFileController->actionImport()
+#10 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yiiApps/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('import')
+#14 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('CsvFile/import')
+#15 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/cash/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/cash/index.php/CsvFile/import
+HTTP_REFERER=http://localhost/cash/index.php
+---
+2013/05/07 09:41:39 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootButton" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /var/www/yiiApps/framework/YiiBase.php:318
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yiiApps/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(CsvFileController), 'bootstrap.widge...', Array)
+#2 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/cash/protected/views/csvFile/import.php(41): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#5 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#6 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#7 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('import', Array, true)
+#8 /var/www/cash/protected/controllers/CsvFileController.php(38): CController->render('import', Array)
+#9 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): CsvFileController->actionImport()
+#10 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yiiApps/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('import')
+#14 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('CsvFile/import')
+#15 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/cash/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/cash/index.php/CsvFile/import
+HTTP_REFERER=http://localhost/cash/index.php
+---
+2013/05/07 09:42:13 [warning] [application] Failed to set unsafe attribute "file" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 09:44:00 [warning] [application] Failed to set unsafe attribute "file" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 09:50:40 [warning] [application] Failed to set unsafe attribute "file" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 09:51:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cash.CsvFile' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `CsvFile`.
+in /var/www/cash/protected/controllers/CsvFileController.php (11)
+in /var/www/cash/index.php (13)
+2013/05/07 09:51:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "CsvFile" for active record class "CsvFile" cannot be found in the database.' in /var/www/yiiApps/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(CsvFile))
+#1 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('CsvFile')
+#2 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /var/www/cash/protected/controllers/CsvFileController.php(11): CActiveRecord->__construct()
+#4 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): CsvFileController->actionImport()
+#5 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/yiiApps/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('import')
+#9 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('CsvFile/import')
+#10 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/cash/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/cash/index.php/CsvFile/import
+HTTP_REFERER=http://localhost/cash/index.php/CsvFile/import
+---
+2013/05/07 09:52:49 [warning] [application] Failed to set unsafe attribute "file" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 09:52:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "bca".' in /var/www/yiiApps/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(271): CController->missingAction('bca')
+#1 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('bca')
+#2 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('csvFile/bca')
+#3 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/cash/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/cash/index.php/csvFile/bca
+HTTP_REFERER=http://localhost/cash/index.php/CsvFile/import
+---
+2013/05/07 09:53:26 [warning] [application] Failed to set unsafe attribute "file" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 09:58:45 [warning] [application] Failed to set unsafe attribute "file" of "CsvFile".
+in /var/www/cash/protected/controllers/CsvFileController.php (14)
+in /var/www/cash/index.php (13)
+2013/05/07 10:37:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "importcsvform".' in /var/www/yiiApps/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(271): CController->missingAction('importcsvform')
+#1 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('importcsvform')
+#2 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('site/importcsvf...')
+#3 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/cash/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/cash/index.php/site/importcsvform
+HTTP_REFERER=http://localhost/cash/index.php/site/index
+---
+2013/05/07 10:37:28 [error] [php] include(CsvFile.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/cash/protected/views/site/importcsvform.php(7): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CBaseController.php(127): require()
+#2 /var/www/yiiApps/framework/web/CBaseController.php(96): SiteController->renderInternal()
+#3 /var/www/yiiApps/framework/web/CController.php(870): SiteController->renderFile()
+#4 /var/www/yiiApps/framework/web/CController.php(783): SiteController->renderPartial()
+#5 /var/www/cash/protected/controllers/SiteController.php(112): SiteController->render()
+#6 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SiteController->actionimportcsvform()
+#7 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /var/www/yiiApps/framework/web/CController.php(287): SiteController->runAction()
+#9 /var/www/yiiApps/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#10 /var/www/yiiApps/framework/web/CWebApplication.php(283): SiteController->run()
+#11 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/site/importcsvform
+in /var/www/cash/protected/views/site/importcsvform.php (7)
+in /var/www/cash/protected/controllers/SiteController.php (112)
+in /var/www/cash/index.php (13)
+2013/05/07 13:50:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.php".' in /var/www/yiiApps/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('index.php')
+#1 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/cash/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/cash/index.php/index.php?r=importcsv/default/upload
+HTTP_REFERER=http://localhost/cash/index.php/importcsv
+---
+2013/05/07 13:55:22 [error] [exception.CException] exception 'CException' with message 'Alias "importcsv.ImportcsvModule" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /var/www/yiiApps/framework/YiiBase.php:318
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(198): YiiBase::import('importcsv.Impor...', true)
+#1 /var/www/yiiApps/framework/base/CModule.php(283): YiiBase::createComponent('importcsv.Impor...', 'importcsv', NULL, Array)
+#2 /var/www/yiiApps/framework/web/CWebApplication.php(338): CModule->getModule('importcsv')
+#3 /var/www/yiiApps/framework/web/CWebApplication.php(277): CWebApplication->createController('importcsv')
+#4 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('importcsv')
+#5 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /var/www/cash/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/cash/index.php/importcsv
+HTTP_REFERER=http://localhost/cash/index.php/importcsv
+---
+2013/05/07 16:24:05 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/07 16:24:05 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/07 16:42:46 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/07 16:42:46 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 10:05:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territory/admin')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php/territory/admin
+HTTP_REFERER=http://localhost/cash/index.php/site/index
+---
+2013/05/08 10:17:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territory/admin
+---
+2013/05/08 10:26:23 [error] [exception.CException] exception 'CException' with message 'Property "TbDataColumn.0" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:174
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(222): CComponent->__set('0', 'territory_id')
+#1 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(336): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(109): CGridView->initColumns()
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(307): TbGridView->initColumns()
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(54): CGridView->init()
+#5 /var/www/yiiApps/framework/web/CBaseController.php(148): TbGridView->init()
+#6 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /var/www/cash/protected/views/territoryTarget/admin.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#8 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#9 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#11 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /var/www/cash/protected/controllers/TerritoryTargetController.php(145): CController->render('admin', Array)
+#13 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionAdmin()
+#14 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#23 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#24 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/cash/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/admin
+---
+2013/05/08 10:27:42 [error] [exception.CException] exception 'CException' with message 'Property "TbDataColumn.0" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:174
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(222): CComponent->__set('0', 'territory_id')
+#1 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(336): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(109): CGridView->initColumns()
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(307): TbGridView->initColumns()
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(54): CGridView->init()
+#5 /var/www/yiiApps/framework/web/CBaseController.php(148): TbGridView->init()
+#6 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /var/www/cash/protected/views/territoryTarget/admin.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#8 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#9 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#11 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /var/www/cash/protected/controllers/TerritoryTargetController.php(145): CController->render('admin', Array)
+#13 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionAdmin()
+#14 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#23 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#24 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/cash/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territory/admin
+---
+2013/05/08 10:29:03 [error] [exception.CException] exception 'CException' with message 'Property "TerritoryTarget.user_id" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(144): CComponent->__get('user_id')
+#1 /var/www/yiiApps/framework/web/helpers/CHtml.php(2158): CActiveRecord->__get('user_id')
+#2 /var/www/yiiApps/framework/web/helpers/CHtml.php(1515): CHtml::resolveValue(Object(TerritoryTarget), 'user_id')
+#3 /var/www/yiiApps/framework/web/widgets/CActiveForm.php(764): CHtml::activeDropDownList(Object(TerritoryTarget), 'user_id', Array, Array)
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/input/TbInputHorizontal.php(113): CActiveForm->dropDownList(Object(TerritoryTarget), 'user_id', Array, Array)
+#5 /var/www/cash/protected/extensions/bootstrap/widgets/input/TbInput.php(204): TbInputHorizontal->dropDownList()
+#6 /var/www/cash/protected/extensions/bootstrap/widgets/input/TbInputHorizontal.php(24): TbInput->run()
+#7 /var/www/yiiApps/framework/web/CBaseController.php(174): TbInputHorizontal->run()
+#8 /var/www/cash/protected/extensions/bootstrap/widgets/TbActiveForm.php(620): CBaseController->widget('bootstrap.widge...', Array)
+#9 /var/www/cash/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('dropdownlist', Object(TerritoryTarget), 'user_id', Array, Array)
+#10 /var/www/cash/protected/views/territoryTarget/_form.php(11): TbActiveForm->dropDownListRow(Object(TerritoryTarget), 'user_id', Array, Array)
+#11 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#12 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#13 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#14 /var/www/cash/protected/views/territoryTarget/create.php(15): CController->renderPartial('_form', Array)
+#15 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#16 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#17 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#18 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#19 /var/www/cash/protected/controllers/TerritoryTargetController.php(75): CController->render('create', Array)
+#20 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionCreate()
+#21 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#22 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#24 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#28 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('create')
+#30 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#31 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#32 /var/www/cash/index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/create
+---
+2013/05/08 10:36:33 [error] [exception.CException] exception 'CException' with message 'Property "Territory.territory_id" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(144): CComponent->__get('territory_id')
+#1 /var/www/cash/protected/models/Territory.php(96): CActiveRecord->__get('territory_id')
+#2 /var/www/cash/protected/views/territoryTarget/_form.php(11): Territory->getListTeritori()
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#5 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#6 /var/www/cash/protected/views/territoryTarget/create.php(15): CController->renderPartial('_form', Array)
+#7 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#8 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#9 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#11 /var/www/cash/protected/controllers/TerritoryTargetController.php(75): CController->render('create', Array)
+#12 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionCreate()
+#13 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#14 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#20 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('create')
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#23 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /var/www/cash/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/create
+---
+2013/05/08 10:43:43 [error] [exception.CException] exception 'CException' with message 'Property "TerritoryTarget.user_id" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(144): CComponent->__get('user_id')
+#1 /var/www/cash/protected/controllers/TerritoryTargetController.php(176): CActiveRecord->__get('user_id')
+#2 /var/www/cash/protected/views/territoryTarget/view.php(24): TerritoryTargetController->namaTeritori(Object(TerritoryTarget))
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#5 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#6 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#7 /var/www/cash/protected/controllers/TerritoryTargetController.php(52): CController->render('view', Array)
+#8 [internal function]: TerritoryTargetController->actionView('1')
+#9 /var/www/yiiApps/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TerritoryTargetController), Array)
+#10 /var/www/yiiApps/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TerritoryTargetController), Object(ReflectionMethod), Array)
+#11 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('view')
+#20 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#21 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/cash/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/1
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/create
+---
+2013/05/08 10:44:11 [error] [exception.CException] exception 'CException' with message 'Property "TerritoryTarget.user_id" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(144): CComponent->__get('user_id')
+#1 /var/www/cash/protected/controllers/TerritoryTargetController.php(176): CActiveRecord->__get('user_id')
+#2 /var/www/cash/protected/views/territoryTarget/view.php(23): TerritoryTargetController->namaTeritori(Object(TerritoryTarget))
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#5 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#6 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#7 /var/www/cash/protected/controllers/TerritoryTargetController.php(52): CController->render('view', Array)
+#8 [internal function]: TerritoryTargetController->actionView('1')
+#9 /var/www/yiiApps/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TerritoryTargetController), Array)
+#10 /var/www/yiiApps/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TerritoryTargetController), Object(ReflectionMethod), Array)
+#11 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('view')
+#20 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#21 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/cash/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/1
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/create
+---
+2013/05/08 10:44:56 [error] [exception.CException] exception 'CException' with message 'Property "TerritoryTarget.user_id" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(144): CComponent->__get('user_id')
+#1 /var/www/cash/protected/controllers/TerritoryTargetController.php(176): CActiveRecord->__get('user_id')
+#2 /var/www/cash/protected/views/territoryTarget/view.php(23): TerritoryTargetController->namaTeritori(Object(TerritoryTarget))
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#5 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#6 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#7 /var/www/cash/protected/controllers/TerritoryTargetController.php(52): CController->render('view', Array)
+#8 [internal function]: TerritoryTargetController->actionView('1')
+#9 /var/www/yiiApps/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TerritoryTargetController), Array)
+#10 /var/www/yiiApps/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TerritoryTargetController), Object(ReflectionMethod), Array)
+#11 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#18 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('view')
+#20 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#21 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /var/www/cash/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/1
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/create
+---
+2013/05/08 10:46:48 [error] [exception.CException] exception 'CException' with message 'Property "TbDataColumn.0" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:174
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(222): CComponent->__set('0', 'territory_id')
+#1 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(336): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(109): CGridView->initColumns()
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(307): TbGridView->initColumns()
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(54): CGridView->init()
+#5 /var/www/yiiApps/framework/web/CBaseController.php(148): TbGridView->init()
+#6 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /var/www/cash/protected/views/territoryTarget/admin.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#8 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#9 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#11 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /var/www/cash/protected/controllers/TerritoryTargetController.php(145): CController->render('admin', Array)
+#13 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionAdmin()
+#14 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#23 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#24 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/cash/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/1
+---
+2013/05/08 10:47:54 [error] [exception.CException] exception 'CException' with message 'Property "TbDataColumn.0" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:174
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(222): CComponent->__set('0', 'territory_id')
+#1 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(336): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(109): CGridView->initColumns()
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(307): TbGridView->initColumns()
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(54): CGridView->init()
+#5 /var/www/yiiApps/framework/web/CBaseController.php(148): TbGridView->init()
+#6 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /var/www/cash/protected/views/territoryTarget/admin.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#8 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#9 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#11 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /var/www/cash/protected/controllers/TerritoryTargetController.php(145): CController->render('admin', Array)
+#13 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionAdmin()
+#14 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#23 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#24 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/cash/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/1
+---
+2013/05/08 10:48:07 [error] [exception.CException] exception 'CException' with message 'Property "TbDataColumn.0" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:174
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(222): CComponent->__set('0', 'territory_id')
+#1 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(336): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(109): CGridView->initColumns()
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(307): TbGridView->initColumns()
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(54): CGridView->init()
+#5 /var/www/yiiApps/framework/web/CBaseController.php(148): TbGridView->init()
+#6 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /var/www/cash/protected/views/territoryTarget/admin.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#8 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#9 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#11 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /var/www/cash/protected/controllers/TerritoryTargetController.php(145): CController->render('admin', Array)
+#13 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionAdmin()
+#14 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#23 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#24 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/cash/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/1
+---
+2013/05/08 10:49:05 [error] [exception.CException] exception 'CException' with message 'Property "TbDataColumn.0" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:174
+Stack trace:
+#0 /var/www/yiiApps/framework/YiiBase.php(222): CComponent->__set('0', 'territory_id')
+#1 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(336): YiiBase::createComponent(Array, Object(TbGridView))
+#2 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(109): CGridView->initColumns()
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(307): TbGridView->initColumns()
+#4 /var/www/cash/protected/extensions/bootstrap/widgets/TbGridView.php(54): CGridView->init()
+#5 /var/www/yiiApps/framework/web/CBaseController.php(148): TbGridView->init()
+#6 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 /var/www/cash/protected/views/territoryTarget/admin.php(44): CBaseController->widget('bootstrap.widge...', Array)
+#8 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#9 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', Array, true)
+#10 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', Array, true)
+#11 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#12 /var/www/cash/protected/controllers/TerritoryTargetController.php(145): CController->render('admin', Array)
+#13 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionAdmin()
+#14 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#21 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('admin')
+#23 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget...')
+#24 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /var/www/cash/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/admin
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/1
+---
+2013/05/08 11:07:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /var/www/yiiApps/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /var/www/yiiApps/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#6 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('')
+#8 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('territoryTarget')
+#9 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/cash/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/cash/index.php/territoryTarget/
+HTTP_REFERER=http://localhost/cash/index.php/territoryTarget/admin
+---
+2013/05/08 11:24:28 [error] [php] Undefined variable: mytarget (/var/www/cash/protected/views/territoryTarget/moTarget.php:44)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): TerritoryTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): TerritoryTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/TerritoryTargetController.php(183): TerritoryTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): TerritoryTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): TerritoryTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): TerritoryTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): TerritoryTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/territoryTarget/motarget
+in /var/www/cash/protected/views/territoryTarget/moTarget.php (44)
+in /var/www/cash/protected/controllers/TerritoryTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/05/08 11:24:41 [error] [php] Undefined variable: mytarget (/var/www/cash/protected/views/territoryTarget/moTarget.php:46)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): TerritoryTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): TerritoryTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/TerritoryTargetController.php(183): TerritoryTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): TerritoryTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): TerritoryTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): TerritoryTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): TerritoryTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/territoryTarget/motarget
+in /var/www/cash/protected/views/territoryTarget/moTarget.php (46)
+in /var/www/cash/protected/controllers/TerritoryTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/05/08 11:34:54 [error] [php] Division by zero (/var/www/cash/protected/views/territoryTarget/moTarget.php:55)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): TerritoryTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): TerritoryTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/TerritoryTargetController.php(183): TerritoryTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): TerritoryTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): TerritoryTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): TerritoryTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): TerritoryTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): TerritoryTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/territoryTarget/motarget
+in /var/www/cash/protected/views/territoryTarget/moTarget.php (55)
+in /var/www/cash/protected/controllers/TerritoryTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/05/08 13:56:51 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:56:51 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:56:53 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:56:53 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:56:55 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:56:55 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:29 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:29 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:44 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:44 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:48 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:48 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:51 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:58:51 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:11 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:11 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:13 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:13 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:19 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:19 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:24 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:24 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:26 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:26 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:34 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:34 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:37 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:37 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:38 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 13:59:38 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:00:52 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:00:52 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:01:00 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:01:00 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:20:50 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:20:50 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:20:56 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:20:56 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:21:08 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:21:08 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:21:35 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:21:35 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:21:45 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:21:45 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:23:23 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:23:23 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:23:43 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 14:23:43 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:09 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:09 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:19 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:19 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:36 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:36 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:47 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:47 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:53 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:53 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:59 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:22:59 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:02 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:02 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:08 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:08 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:13 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:13 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:15 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:15 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:21 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:21 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:25 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:25 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:28 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:28 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:30 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:23:30 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:36:45 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:36:45 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:36:57 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:36:57 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:02 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:02 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:08 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:08 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:13 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:13 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:19 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:19 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:47 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:47 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:52 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:52 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:58 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:37:58 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:02 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:02 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:05 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:05 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:20 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:20 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:25 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:25 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:31 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:31 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:34 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:34 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:40 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:40 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:49 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:38:49 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:39:00 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:39:00 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:40:43 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/08 15:40:43 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/05/31 13:50:02 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:50:40 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:52:00 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:52:01 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:52:01 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:52:02 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:53:07 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:53:08 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:53:08 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/05/31 13:53:08 [error] [php] include(ChartData.php): failed to open stream: No such file or directory (/var/www/yiiApps/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(387): spl_autoload_call()
+#1 /var/www/yiiApps/framework/web/CActiveDataProvider.php(75): model()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(196): CActiveDataProvider->__construct()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionChartView()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+in /var/www/cash/protected/controllers/SalesTargetController.php (196)
+in /var/www/cash/index.php (13)
+2013/06/10 14:42:03 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:42:47 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:42:52 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:46:35 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:48:29 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:49:33 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:49:35 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:49:35 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:49:43 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 14:50:55 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/myReport.php:30)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(183): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmyReport()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/myreport
+in /var/www/cash/protected/views/salesTarget/myReport.php (30)
+in /var/www/cash/protected/controllers/SalesTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/06/10 14:57:27 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/myReport.php:30)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(183): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmyReport()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/myreport
+in /var/www/cash/protected/views/salesTarget/myReport.php (30)
+in /var/www/cash/protected/controllers/SalesTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/06/10 14:58:21 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/myReport.php:30)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(183): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmyReport()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/myreport
+in /var/www/cash/protected/views/salesTarget/myReport.php (30)
+in /var/www/cash/protected/controllers/SalesTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/06/10 14:58:23 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/myReport.php:30)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(183): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmyReport()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/myreport
+in /var/www/cash/protected/views/salesTarget/myReport.php (30)
+in /var/www/cash/protected/controllers/SalesTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/06/10 14:59:55 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/myReport.php:30)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(183): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmyReport()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/myreport
+in /var/www/cash/protected/views/salesTarget/myReport.php (30)
+in /var/www/cash/protected/controllers/SalesTargetController.php (183)
+in /var/www/cash/index.php (13)
+2013/06/10 15:02:36 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(190): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (190)
+in /var/www/cash/index.php (13)
+2013/06/10 15:03:30 [error] [exception.CException] exception 'CException' with message 'SalesTargetController and its behaviors do not have a method or closure named "actionmotarget".' in /var/www/yiiApps/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): CComponent->__call('actionmotarget', Array)
+#1 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmotarget()
+#2 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#9 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('motarget')
+#11 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesTarget/mot...')
+#12 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/cash/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+HTTP_REFERER=http://localhost/cash/index.php/bankReceipt/admin
+---
+2013/06/10 15:03:31 [error] [exception.CException] exception 'CException' with message 'SalesTargetController and its behaviors do not have a method or closure named "actionmotarget".' in /var/www/yiiApps/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): CComponent->__call('actionmotarget', Array)
+#1 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmotarget()
+#2 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#9 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('motarget')
+#11 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesTarget/mot...')
+#12 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /var/www/cash/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+HTTP_REFERER=http://localhost/cash/index.php/bankReceipt/admin
+---
+2013/06/10 15:03:41 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/10 15:04:58 [error] [exception.CException] exception 'CException' with message 'SalesTargetController and its behaviors do not have a method or closure named "getMyTarget".' in /var/www/yiiApps/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/cash/protected/views/salesTarget/moTarget.php(41): CComponent->__call('getMyTarget', Array)
+#1 /var/www/cash/protected/views/salesTarget/moTarget.php(41): SalesTargetController->getMyTarget('8', '2013-06')
+#2 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#3 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', NULL, true)
+#4 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', NULL, true)
+#5 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('moTarget', NULL, true)
+#6 /var/www/cash/protected/controllers/SalesTargetController.php(188): CController->render('moTarget')
+#7 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#8 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#15 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('motarget')
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesTarget/mot...')
+#18 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /var/www/cash/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+HTTP_REFERER=http://localhost/cash/index.php/bankReceipt/admin
+---
+2013/06/10 15:07:12 [error] [php] Non-static method SalesTarget::getMyTarget() should not be called statically, assuming $this from incompatible context (/var/www/cash/protected/views/salesTarget/moTarget.php:41)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesTargetController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesTargetController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesTargetController.php(188): SalesTargetController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesTargetController->actionmoTarget()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesTargetController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesTargetController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesTargetController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesTargetController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesTarget/motarget
+in /var/www/cash/protected/views/salesTarget/moTarget.php (41)
+in /var/www/cash/protected/controllers/SalesTargetController.php (188)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:29 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:29 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:32 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:32 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:34 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:34 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:37 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:37 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:42 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:42 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:45 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:37:45 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/11 13:51:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chartview".' in /var/www/yiiApps/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(271): CController->missingAction('chartview')
+#1 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('chartview')
+#2 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesTarget/cha...')
+#3 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/cash/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+---
+2013/06/11 13:52:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chartview".' in /var/www/yiiApps/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(271): CController->missingAction('chartview')
+#1 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('chartview')
+#2 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesTarget/cha...')
+#3 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/cash/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/cash/index.php/salesTarget/chartview
+---
+2013/06/12 15:45:42 [error] [php] Undefined variable: model (/var/www/cash/protected/models/SalesReport.php:242)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#1 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#2 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#3 /var/www/cash/protected/controllers/SalesReportController.php(207): SalesReportController->render()
+#4 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionpaymentstatus()
+#5 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#7 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#9 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#10 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#11 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#12 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#14 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#15 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/paymentstatus/3
+in /var/www/cash/protected/models/SalesReport.php (242)
+in /var/www/cash/protected/views/salesReport/paymentstatus.php (105)
+in /var/www/cash/protected/controllers/SalesReportController.php (207)
+2013/06/12 15:46:06 [error] [exception.CException] exception 'CException' with message 'Property "SalesReport.amount" is not defined.' in /var/www/yiiApps/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(144): CComponent->__get('amount')
+#1 /var/www/cash/protected/models/SalesReport.php(249): CActiveRecord->__get('amount')
+#2 /var/www/cash/protected/views/salesReport/paymentstatus.php(105): SalesReport->totalPay('3')
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', NULL, true)
+#5 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', NULL, true)
+#6 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('paymentstatus', NULL, true)
+#7 /var/www/cash/protected/controllers/SalesReportController.php(207): CController->render('paymentstatus')
+#8 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionpaymentstatus()
+#9 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#16 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('paymentstatus')
+#18 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesReport/pay...')
+#19 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /var/www/cash/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/cash/index.php/salesReport/paymentstatus/3
+---
+2013/06/12 15:57:11 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/12 15:57:11 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/12 15:59:31 [warning] [application] Failed to set unsafe attribute "ageDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/06/12 15:59:31 [warning] [application] Failed to set unsafe attribute "lateDays" of "SalesReport".
+in /var/www/cash/protected/controllers/SalesReportController.php (144)
+in /var/www/cash/index.php (13)
+2013/07/02 18:12:16 [error] [php] Undefined variable: user (/var/www/cash/protected/views/salesReport/cashin.php:21)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#1 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#2 /var/www/cash/protected/controllers/SalesReportController.php(227): SalesReportController->render()
+#3 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#4 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#6 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#12 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#13 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/cashin
+in /var/www/cash/protected/views/salesReport/cashin.php (21)
+in /var/www/cash/protected/controllers/SalesReportController.php (227)
+in /var/www/cash/index.php (13)
+2013/07/02 18:26:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY due_date desc LIMIT 20' at line 1. The SQL statement executed was: SELECT * FROM `tbl_sales_report` `t` WHERE YEAR(`due_date`) = YEAR(now()) AND MONTH(`due_date`) = MONTH(DATE_SUB(NOW(), INTERVAL 1 MONTH)) ORDER BY `due_date` ORDER BY due_date desc LIMIT 20.
+in /var/www/cash/protected/views/salesReport/cashin.php (117)
+in /var/www/cash/protected/controllers/SalesReportController.php (227)
+in /var/www/cash/index.php (13)
+2013/07/02 18:26:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY due_date desc LIMIT 20' at line 1. The SQL statement executed was: SELECT * FROM `tbl_sales_report` `t` WHERE YEAR(`due_date`) = YEAR(now()) AND MONTH(`due_date`) = MONTH(DATE_SUB(NOW(), INTERVAL 1 MONTH)) ORDER BY `due_date` ORDER BY due_date desc LIMIT 20' in /var/www/yiiApps/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/yiiApps/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 /var/www/yiiApps/framework/db/ar/CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/yiiApps/framework/web/CActiveDataProvider.php(150): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /var/www/yiiApps/framework/web/CDataProvider.php(137): CActiveDataProvider->fetchData()
+#5 /var/www/yiiApps/framework/zii/widgets/CBaseListView.php(108): CDataProvider->getData()
+#6 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(289): CBaseListView->init()
+#7 /var/www/yiiApps/framework/web/CBaseController.php(148): CGridView->init()
+#8 /var/www/yiiApps/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#9 /var/www/cash/protected/views/salesReport/cashin.php(117): CBaseController->widget('zii.widgets.gri...', Array)
+#10 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#11 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', NULL, true)
+#12 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', NULL, true)
+#13 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('cashin', NULL, true)
+#14 /var/www/cash/protected/controllers/SalesReportController.php(227): CController->render('cashin')
+#15 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#16 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#23 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('cashin')
+#25 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesReport/cas...')
+#26 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /var/www/cash/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/cash/index.php/salesReport/cashin
+HTTP_REFERER=http://localhost/cash/index.php/salesReport/cashin
+---
+2013/07/02 21:16:52 [error] [exception.CException] exception 'CException' with message 'CActiveDataProvider and its behaviors do not have a method or closure named "getValidators".' in /var/www/yiiApps/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yiiApps/framework/web/helpers/CHtml.php(1871): CComponent->__call('getValidators', Array)
+#1 /var/www/yiiApps/framework/web/helpers/CHtml.php(1871): CActiveDataProvider->getValidators('id_invoice')
+#2 /var/www/yiiApps/framework/web/helpers/CHtml.php(1217): CHtml::activeInputField('text', Object(CActiveDataProvider), 'id_invoice', Array)
+#3 /var/www/yiiApps/framework/zii/widgets/grid/CDataColumn.php(98): CHtml::activeTextField(Object(CActiveDataProvider), 'id_invoice', Array)
+#4 /var/www/yiiApps/framework/zii/widgets/grid/CGridColumn.php(110): CDataColumn->renderFilterCellContent()
+#5 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(477): CGridColumn->renderFilterCell()
+#6 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderFilter()
+#7 /var/www/yiiApps/framework/zii/widgets/grid/CGridView.php(425): CGridView->renderTableHeader()
+#8 /var/www/yiiApps/framework/zii/widgets/CBaseListView.php(161): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 /var/www/yiiApps/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 /var/www/yiiApps/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#12 /var/www/yiiApps/framework/web/CBaseController.php(174): CBaseListView->run()
+#13 /var/www/cash/protected/views/salesReport/cashin.php(110): CBaseController->widget('zii.widgets.gri...', Array)
+#14 /var/www/yiiApps/framework/web/CBaseController.php(127): require('/var/www/cash/p...')
+#15 /var/www/yiiApps/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/cash/p...', NULL, true)
+#16 /var/www/yiiApps/framework/web/CController.php(870): CBaseController->renderFile('/var/www/cash/p...', NULL, true)
+#17 /var/www/yiiApps/framework/web/CController.php(783): CController->renderPartial('cashin', NULL, true)
+#18 /var/www/cash/protected/controllers/SalesReportController.php(227): CController->render('cashin')
+#19 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#20 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#21 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#22 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#23 /var/www/yiiApps/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#24 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#25 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#26 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#27 /var/www/yiiApps/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 /var/www/yiiApps/framework/web/CWebApplication.php(283): CController->run('cashin')
+#29 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController('salesReport/cas...')
+#30 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#31 /var/www/cash/index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/cash/index.php/salesReport/cashin
+HTTP_REFERER=http://localhost/cash/index.php
+---
+2013/07/03 11:31:23 [error] [php] Undefined variable: model (/var/www/cash/protected/views/salesReport/_formCash.php:15)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#1 /var/www/cash/protected/views/salesReport/cashin.php(20): SalesReportController->renderPartial()
+#2 /var/www/yiiApps/framework/web/CBaseController.php(127): require()
+#3 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#4 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#5 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#6 /var/www/cash/protected/controllers/SalesReportController.php(227): SalesReportController->render()
+#7 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#8 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#10 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#13 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#15 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/cashin
+in /var/www/cash/protected/views/salesReport/_formCash.php (15)
+in /var/www/cash/protected/views/salesReport/cashin.php (20)
+in /var/www/cash/protected/controllers/SalesReportController.php (227)
+2013/07/03 11:32:09 [error] [php] Undefined variable: model (/var/www/cash/protected/views/salesReport/_formCash.php:15)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#1 /var/www/cash/protected/views/salesReport/cashin.php(20): SalesReportController->renderPartial()
+#2 /var/www/yiiApps/framework/web/CBaseController.php(127): require()
+#3 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#4 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#5 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#6 /var/www/cash/protected/controllers/SalesReportController.php(227): SalesReportController->render()
+#7 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#8 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#10 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#13 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#15 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/cashin
+in /var/www/cash/protected/views/salesReport/_formCash.php (15)
+in /var/www/cash/protected/views/salesReport/cashin.php (20)
+in /var/www/cash/protected/controllers/SalesReportController.php (227)
+2013/07/03 11:34:08 [error] [php] Undefined variable: model (/var/www/cash/protected/views/salesReport/_formCash.php:15)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#1 /var/www/cash/protected/views/salesReport/cashin.php(20): SalesReportController->renderPartial()
+#2 /var/www/yiiApps/framework/web/CBaseController.php(127): require()
+#3 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#4 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#5 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#6 /var/www/cash/protected/controllers/SalesReportController.php(232): SalesReportController->render()
+#7 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#8 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#10 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#13 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#15 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/cashin
+in /var/www/cash/protected/views/salesReport/_formCash.php (15)
+in /var/www/cash/protected/views/salesReport/cashin.php (20)
+in /var/www/cash/protected/controllers/SalesReportController.php (232)
+2013/07/03 11:34:12 [error] [php] Undefined variable: model (/var/www/cash/protected/views/salesReport/_formCash.php:15)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#1 /var/www/cash/protected/views/salesReport/cashin.php(20): SalesReportController->renderPartial()
+#2 /var/www/yiiApps/framework/web/CBaseController.php(127): require()
+#3 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#4 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#5 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#6 /var/www/cash/protected/controllers/SalesReportController.php(232): SalesReportController->render()
+#7 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#8 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#9 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#10 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#12 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#13 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#14 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#15 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#16 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#18 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/cashin
+in /var/www/cash/protected/views/salesReport/_formCash.php (15)
+in /var/www/cash/protected/views/salesReport/cashin.php (20)
+in /var/www/cash/protected/controllers/SalesReportController.php (232)
+2013/07/04 09:17:55 [error] [php] Undefined variable: fullPaid (/var/www/cash/protected/models/SalesReport.php:279)
+Stack trace:
+#0 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#1 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#2 /var/www/cash/protected/views/salesReport/cashin.php(20): SalesReportController->renderPartial()
+#3 /var/www/yiiApps/framework/web/CBaseController.php(127): require()
+#4 /var/www/yiiApps/framework/web/CBaseController.php(96): SalesReportController->renderInternal()
+#5 /var/www/yiiApps/framework/web/CController.php(870): SalesReportController->renderFile()
+#6 /var/www/yiiApps/framework/web/CController.php(783): SalesReportController->renderPartial()
+#7 /var/www/cash/protected/controllers/SalesReportController.php(232): SalesReportController->render()
+#8 /var/www/yiiApps/framework/web/actions/CInlineAction.php(50): SalesReportController->actionCashIn()
+#9 /var/www/yiiApps/framework/web/CController.php(309): CInlineAction->runWithParams()
+#10 /var/www/yiiApps/framework/web/filters/CFilterChain.php(134): SalesReportController->runAction()
+#11 /var/www/yiiApps/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /var/www/yiiApps/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#13 /var/www/yiiApps/framework/web/filters/CInlineFilter.php(59): SalesReportController->filterAccessControl()
+#14 /var/www/yiiApps/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#15 /var/www/yiiApps/framework/web/CController.php(292): CFilterChain->run()
+#16 /var/www/yiiApps/framework/web/CController.php(266): SalesReportController->runActionWithFilters()
+#17 /var/www/yiiApps/framework/web/CWebApplication.php(283): SalesReportController->run()
+#18 /var/www/yiiApps/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#19 /var/www/yiiApps/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /var/www/cash/index.php(13): CWebApplication->run()
+REQUEST_URI=/cash/index.php/salesReport/cashin
+in /var/www/cash/protected/models/SalesReport.php (279)
+in /var/www/cash/protected/views/salesReport/_formCash.php (3)
+in /var/www/cash/protected/views/salesReport/cashin.php (20)

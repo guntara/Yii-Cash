@@ -3,7 +3,7 @@
  * ImportCSV Module
  *
  * @author Artem Demchenkov <lunoxot@mail.ru>
- * @version 0.0.1
+ * @version 0.0.3
  *
  *
  *
@@ -15,11 +15,11 @@ if($error==1) {
     
     // first error: Delimiter can not be empty
     
-    echo("<span class='importCsvError'>".Yii::t('importcsvModule.importcsv', 'Error').": ".Yii::t('importcsvModule.importcsv', 'Delimiter can not be empty')."</span>");
+    echo("<span class='importCsvError'>".Yii::t('importcsvModule.importcsv', 'Error').": ".Yii::t('importcsvModule.importcsv', 'Fields Delimiter can not be empty')."</span>");
 }
 elseif($error==0){
 
-    //making options width csv poles for $csvKey
+    //making options width csv columns for $csvKey
 
     $lengthCsv       = sizeof($fromCsv);
     $optionsContent4 = '<option value=\"\"></option>';
@@ -50,7 +50,7 @@ elseif($error==0){
     $optionsContent3 = trim($optionsContent3);
 
     /*
-     * making table width poles for third step
+     * making table width columns for third step
      */
 
     $selected1   = ($paramsArray['mode']==1) ? 'selected=\"selected\"' : '';
@@ -62,34 +62,35 @@ elseif($error==0){
     $modeOption3 = '<option value=\"3\" '.$selected3.'>'.Yii::t('importcsvModule.importcsv', 'Insert new and replace old').'</option>';
 
     $modeContent = '<select name=\"Mode\" id=\"Mode\">'.$modeOption1.$modeOption2.$modeOption3.'</select>';
-    $keysContent = '<tr><td>'.Yii::t('importcsvModule.importcsv', 'Table pole').'</td><td><select name=\"Tablekey\">'.$optionsContent3.'</select></td></tr><tr><td>'.Yii::t('importcsvModule.importcsv', 'CSV pole').'</td><td><select name=\"CSVkey\">'.$optionsContent4.'</select></td></tr>';
+    $keysContent = '<tr><td>'.Yii::t('importcsvModule.importcsv', 'Table field').'</td><td><select name=\"Tablekey\">'.$optionsContent3.'</select></td></tr><tr><td>'.Yii::t('importcsvModule.importcsv', 'CSV field').'</td><td><select name=\"CSVkey\">'.$optionsContent4.'</select></td></tr>';
 
 
     $perRequest = ($paramsArray['perRequest']!='') ? $paramsArray['perRequest'] : '10';
-    $thirdContent = '<table class=\"importCsvTable\" cellpadding=\"5\" cellspacing=\"1\" border=\"0\" width=\"100%\"><tr><td width=\"50%\">'.Yii::t('importcsvModule.importcsv', 'Mode').' <span class=\"require\">*</span></td><td width=\"50%\">'.$modeContent.'</td></tr><tr><td width=\"50%\">'.Yii::t('importcsvModule.importcsv', 'Items per one request').' <span class=\"require\">*</span></td><td width=\"50%\"><input type=\"text\" name=\"perRequest\" id=\"perRequest\" value=\"'.$perRequest.'\"/></td></tr><tr><th colspan=\"2\">'.Yii::t('importcsvModule.importcsv', 'Keys for compare').'</th>'.$keysContent.'</tr><tr><th>'.Yii::t('importcsvModule.importcsv', 'Table pole').'</th><th>'.Yii::t('importcsvModule.importcsv', 'CSV pole').'</th></tr>';
+    $thirdContent = '<table class=\"importCsvTable\" cellpadding=\"5\" cellspacing=\"1\" border=\"0\" width=\"100%\"><tr><td width=\"50%\">'.Yii::t('importcsvModule.importcsv', 'Mode').' <span class=\"require\">*</span></td><td width=\"50%\">'.$modeContent.'</td></tr><tr><td width=\"50%\">'.Yii::t('importcsvModule.importcsv', 'Items per one request').' <span class=\"require\">*</span></td><td width=\"50%\"><input type=\"text\" name=\"perRequest\" id=\"perRequest\" value=\"'.$perRequest.'\"/></td></tr><tr><th colspan=\"2\">'.Yii::t('importcsvModule.importcsv', 'Keys for compare').'</th>'.$keysContent.'</tr><tr><th>'.Yii::t('importcsvModule.importcsv', 'Table column').'</th><th>'.Yii::t('importcsvModule.importcsv', 'CSV column').'</th></tr>';
     for($i=0; $i<$length; $i++) {
 
         $optionsContent  = '<option value=\"\"></option>';
         for($n=0; $n<$lengthCsv; $n++) {
             $valOpt = $n+1;
-            $selected = ($paramsArray['columns'][$tableColumns[$i]]==$valOpt) ? 'selected=\"selected\"' : '';
+            $selected = (isset($paramsArray['columns'][$tableColumns[$i]]) && $paramsArray['columns'][$tableColumns[$i]]==$valOpt) ? 'selected=\"selected\"' : '';
             $optionsContent  = $optionsContent.'<option value=\"'.$valOpt.'\" '.$selected.'>'.trim($fromCsv[$n]).'</option>';
         }
         $optionsContent  = trim($optionsContent);
 
-        $thirdContent = $thirdContent.'<tr><td>'.$tableColumns[$i].'</td><td><select name=\"Poles['.$i.']\" id=\"select_'.$i.'\">'.$optionsContent.'</select></td></tr>';
+        $thirdContent = $thirdContent.'<tr><td>'.$tableColumns[$i].'</td><td><select name=\"Columns['.$i.']\" id=\"select_'.$i.'\">'.$optionsContent.'</select></td></tr>';
     }
-    $notes1 = '<strong><em>'.Yii::t('importcsvModule.importcsv', 'Notes').'</em></strong><br/>&laquo;'.Yii::t('importcsvModule.importcsv', 'Insert all').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'All items add. Old items remain unchanged');
-    $notes2 = '&laquo;'.Yii::t('importcsvModule.importcsv', 'Insert new').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'New items add. Old items remain unchanged');
-    $notes3 = '&laquo;'.Yii::t('importcsvModule.importcsv', 'Insert new and replace old').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'New items add. Old items replace');
-    $thirdContent = $thirdContent.'</table><br/><br/>'.$notes1.'<br/>'.$notes2.'<br/>'.$notes3;
+    $notes1 = '<strong><em>'.Yii::t('importcsvModule.importcsv', 'Notes').'</em></strong><br/>&laquo;'.Yii::t('importcsvModule.importcsv', 'Insert all').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'All items add. Old items remain unchanged').',';
+    $notes2 = '&laquo;'.Yii::t('importcsvModule.importcsv', 'Insert new').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'New items add. Old items remain unchanged').',';
+    $notes3 = '&laquo;'.Yii::t('importcsvModule.importcsv', 'Insert new and replace old').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'New items add. Old items replace').',';
+    $notes4 = '&laquo;'.Yii::t('importcsvModule.importcsv', 'Keys for compare').'&raquo; - '.Yii::t('importcsvModule.importcsv', 'If you use &laquo;Insert new&raquo; or &laquo;Insert new and replace old&raquo; mode, you need to select a key field from table and from csv. Using this fields script will realize is this row new or old').'.';
+    $thirdContent = $thirdContent.'</table><br/><br/>'.$notes1.'<br/>'.$notes2.'<br/>'.$notes3.'<br/>'.$notes4;
     $thirdContent = trim($thirdContent);
 
     // Going to third step
     
     ?>
     <script type="text/javascript">
-        toThirdStep("<?php echo($thirdContent);?>", "<?php echo($delimiter);?>", "<?php echo($table);?>");
+        toThirdStep("<?php echo($thirdContent);?>", "<?php echo addslashes($delimiter);?>", "<?php echo($table);?>", "<?php echo addslashes($textDelimiter);?>");
     </script>
     <?php
 }

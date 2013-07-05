@@ -206,16 +206,84 @@ class SalesReport extends CActiveRecord
 		));
 	}
 
+	public function cashin($month)
+	{
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'YEAR(`due_date`) = YEAR(now()) AND MONTH(`due_date`) = MONTH(DATE_SUB(NOW(), INTERVAL '. $month.' MONTH))';
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination' => array(
+				'pageSize' => 20,
+			),
+			'sort' => array(
+				'defaultOrder' => 'due_date asc',
+			),
+		));
+	}
+
 	public function filterSales()
 	{
 		$id = User::model()->findAllByAttributes(array('username'=>$value));
 		$data = Profiles::model()->findByPK($id[0]['id']);
 		$arrSM = Users::model()->getAllSales();
 		$codes = self::model()->findAll();
-		$data = array(); // data to be returned
+		$data = array();
 		foreach ($codes as $c) {
 			$data[$c->id] = $c->code;
 		}
 		return $data;
+	}
+
+	public function filterCustomer()
+	{
+		$codes=SalesReport::model()->findAll(array(
+			'select'=>'customer',
+			'distinct'=>true,
+			'order'=>'customer ASC',
+		));
+
+		$data = array();
+		foreach ($codes as $c) {
+			$data[$c->customer] = $c->customer;
+		}
+		return $data;
+	}
+
+	public function totalPay($id)
+	{
+		$criteria = new CDbCriteria;
+		if($id==1) $provider = $this->findAll('`status`=0 AND DATE_SUB(CURDATE(),INTERVAL 7 DAY) >= `due_date`');
+		if($id==2) $provider = $this->findAll('`status`=0 AND `due_date`> DATE_ADD(CURDATE(), INTERVAL -7 DAY) AND `due_date` <= CURDATE()');
+		if($id==3) $provider = $this->findAll('`status`=0 AND `due_date`>= CURDATE() AND `due_date` <= DATE_ADD(CURDATE(), INTERVAL 7 DAY)');
+
+		$totalPay=0;
+		$countPay=0;
+		//$provider = $model->findAll('id_bankReceipt = :idBR',array(':idBR'=>$id_bR));
+		foreach($provider as $data)
+		{
+			$totalPay += $data->total;
+			$countPay++;
+		}
+		return $totalPay.'_'.$countPay;
+	}
+
+	public function totalCashin($month)
+	{
+		$hasil = array();
+		$provider = $this->findAll('YEAR(`due_date`) = YEAR(now()) AND MONTH(`due_date`) = MONTH(DATE_SUB(NOW(), INTERVAL '. $month.' MONTH))');
+
+		$actualPaid=0;
+		$countPaid=0;
+		$expectedPaid=0;
+		$totalInv=0;
+		$fullPaid=0;
+		foreach($provider as $data){
+			if($data->status == 1) $countPaid++;
+			$actualPaid += Allocate::model()->getPayedSR($data->id);
+			$expectedPaid += $data->total; $totalInv++;
+		}
+		$hasil[1] = $countPaid; $hasil[2] = $totalInv; $hasil[3] = $expectedPaid; $hasil[4] = $actualPaid;
+		return $hasil;
 	}
 }

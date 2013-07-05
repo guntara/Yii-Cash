@@ -178,7 +178,7 @@ class Allocate extends CActiveRecord
 		$SR = Yii::app()->db->createCommand()
 		    ->select()
 		    ->from('tbl_sales_report')
-		    ->where('id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$idSR))
+		    ->where('id=:id or id_SO=:id or id_DO=:id or id_invoice=:id', array(':id'=>$idSR))
 		    ->queryRow();
 
 		$salesRep = Yii::app()->db->createCommand()
